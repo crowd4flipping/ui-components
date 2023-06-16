@@ -2,6 +2,6 @@
 @import "../00.settings/all-settings.scss";
 
 p {
-  font-size: var(--fs-base);
-  color: var(--text-color);
+  font-size: $fs-base;
+  color: $text-color;
 }

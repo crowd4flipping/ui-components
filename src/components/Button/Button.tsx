@@ -1,5 +1,5 @@
 import React from "react";
-import "../styles/theme/05.components/atoms/_button.scss";
+import "../styles/global.scss"
 
 type ButtonProps = {
   label: string;
