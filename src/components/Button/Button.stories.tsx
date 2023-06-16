@@ -15,6 +15,7 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const MyButton: Story = {
+  name: "Mi first story button",
   args: {
     label: "My Button",
   },
