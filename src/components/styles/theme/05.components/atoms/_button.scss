@@ -1,0 +1,19 @@
+@import "../../00.settings/_colors.scss";
+
+.btn {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+
+  -webkit-border-radius: 0.25rem;
+  -moz-border-radius: 0.25rem;
+  border-radius: 0.25rem;
+
+  text-align: center;
+
+  &-primary {
+    background-color: $primary-color;
+    color: $white;
+  }
+}

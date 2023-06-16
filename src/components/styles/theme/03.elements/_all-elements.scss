@@ -1,0 +1,7 @@
+// Defining the html elements: h1, img, a ...
+@import "../00.settings/all-settings.scss";
+
+p {
+  font-size: var(--fs-base);
+  color: var(--text-color);
+}
