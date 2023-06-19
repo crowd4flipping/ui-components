@@ -12,7 +12,8 @@ $_transparent-light-blue-gray: #8d9ba645;
 
 $_blue: #02b3e8;
 $_sky-blue: #1ecbff;
-$_light-blue: #ccf3ff;
+$_pale-blue: #9CE8FF;
+$_light-blue: #E5F9FF;
 
 $_green: #008000;
 $_light-green: #63b000;
@@ -28,6 +29,7 @@ $_light-brown: #935f00;
 
 $primary-color: $_blue;
 $primary-color-hover: $_sky-blue;
+$primary-color-pale: $_pale-blue;
 $primary-color-light: $_light-blue;
 
 $surface-color: $_light-gray;

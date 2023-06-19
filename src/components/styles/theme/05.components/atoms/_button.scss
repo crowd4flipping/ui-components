@@ -2,13 +2,13 @@
 
 .btn {
   padding: 0.5rem 0.75rem;
-  -webkit-border-radius: 0.25rem;
-  -moz-border-radius: 0.25rem;
-  border-radius: 0.25rem;
+  -webkit-border-radius: $br-sm;
+  -moz-border-radius: $br-sm;
+  border-radius: $br-sm;
   text-align: center;
   font-weight: $fw-medium;
   transition: 0.3s;
-  border: $borderw-small solid transparent;
+  border: $bw-sm solid transparent;
 
   &--full-width {
     padding: 0.5rem 0rem;
@@ -25,8 +25,8 @@
   }
 
   &--secondary {
-    border: $borderw-small solid $primary-color;
-
+    border: $bw-sm solid $primary-color;
+    
     &:hover {
       border-color: rgba($primary-color-hover, 0.5);
       background-color: rgba($primary-color-light, 0.3);
