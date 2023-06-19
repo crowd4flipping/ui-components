@@ -22,13 +22,13 @@ export default [
       commonjs(),
       typescript({ tsconfig: "./tsconfig.json" }),
       postcss({
-        plugins: []
+        plugins: [],
       }),
     ],
   },
- /*  {
+  {
     input: "dist/esm/types/index.d.ts",
     output: [{ file: "dist/index.d.ts", format: "esm" }],
     plugins: [dts()],
-  } */
+  },
 ];

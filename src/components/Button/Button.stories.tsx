@@ -5,18 +5,32 @@ const meta = {
   title: "Components/Button",
   component: Button,
   tags: ["buttons"],
-  argTypes: {
-    label: { defaultValue: "My custom button", description: "Button label" },
-  },
 } satisfies Meta<typeof Button>;
 
 export default meta;
 
 type Story = StoryObj<typeof meta>;
 
-export const MyButton: Story = {
-  name: "Mi first story button",
+export const PrimaryButton: Story = {
+  name: "Primary button",
   args: {
-    label: "My Button",
+    children: "Primary Button",
+    variant: "primary",
+  },
+};
+
+export const SecondaryButton: Story = {
+  name: "Secondary button",
+  args: {
+    children: "Secondary Button",
+    variant: "secondary",
+  },
+};
+
+export const TertiaryButton: Story = {
+  name: "Tertiary button",
+  args: {
+    children: "Tertiary Button",
+    variant: "tertiary",
   },
 };

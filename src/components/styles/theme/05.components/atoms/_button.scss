@@ -1,19 +1,44 @@
 @import "../../00.settings/all-settings";
 
 .btn {
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-  padding-left: 0.75rem;
-  padding-right: 0.75rem;
-
+  padding: 0.5rem 0.75rem;
   -webkit-border-radius: 0.25rem;
   -moz-border-radius: 0.25rem;
   border-radius: 0.25rem;
-
   text-align: center;
+  font-weight: $fw-medium;
+  transition: 0.3s;
+  border: $borderw-small solid transparent;
 
-  &-primary {
+  &--full-width {
+    padding: 0.5rem 0rem;
+    width: 100%;
+  }
+
+  &--primary {
     background-color: $primary-color;
     color: $white;
+
+    &:hover {
+      background-color: $primary-color-hover;
+    }
+  }
+
+  &--secondary {
+    border: $borderw-small solid $primary-color;
+
+    &:hover {
+      border-color: rgba($primary-color-hover, 0.5);
+      background-color: rgba($primary-color-light, 0.3);
+    }
+  }
+
+  &--tertiary {
+    color: $primary-color;
+    background-color: $surface-color-foggy;
+
+    &:hover {
+      background-color: $surface-color;
+    }
   }
 }

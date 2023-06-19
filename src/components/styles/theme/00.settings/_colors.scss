@@ -6,7 +6,7 @@ $_purple: #1b2444;
 $_light-purple: #4c5473;
 
 $_light-gray: #f6f2f2;
-$_blue-gray: #4e6374;
+$_pale-gray: #E3E9EB;
 $_light-blue-gray: #8d9ba680;
 $_transparent-light-blue-gray: #8d9ba645;
 
@@ -27,7 +27,12 @@ $_light-brown: #935f00;
 // ------
 
 $primary-color: $_blue;
-$hover-primary-color: $_light-blue;
-$text-color: #2d3038;
+$primary-color-hover: $_sky-blue;
+$primary-color-light: $_light-blue;
+
+$surface-color: $_light-gray;
+$surface-color-foggy: $_pale-gray;
+
+$text-color: $_black;
 $white: $_white;
 

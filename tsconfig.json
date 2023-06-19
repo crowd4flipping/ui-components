@@ -1,16 +1,14 @@
 {
   "compilerOptions": {
+    //"jsx": "preserve",
     "jsx": "react",
-    //"jsx": "react",
     "module": "ESNext",
     "moduleResolution": "node",
     "outDir": "dist",
     "declaration": true,
     "declarationDir": "types",
-    "sourceMap": true,
     "allowSyntheticDefaultImports": true,
     "emitDeclarationOnly": true,
-
     "baseUrl": ".",
     "paths": {
       "@/src/*": ["./src/*"],
