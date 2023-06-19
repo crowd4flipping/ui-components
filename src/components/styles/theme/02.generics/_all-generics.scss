@@ -7,6 +7,12 @@ body{
   color: $text-color;
 }
 
+a {
+  color: inherit;
+  text-decoration: inherit;
+  cursor: inherit;
+}
+
 button {
   all: unset;
   cursor: pointer;

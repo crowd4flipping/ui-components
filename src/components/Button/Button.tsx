@@ -9,7 +9,7 @@ type ReactButtonProps = ReactComponentElement<"button">["props"] & {
 export const Button = ({
   children,
   onClick,
-  type,
+  type = "button",
   fullWidth = false,
   variant,
 }: ReactButtonProps) => {
