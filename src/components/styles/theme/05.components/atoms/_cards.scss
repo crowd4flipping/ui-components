@@ -17,7 +17,7 @@
   }
 
   &--dark {
-    background-color: $light-blue-gray;
+    background-color: $card-bg-color-dark;
     border: $bw-sm solid rgba($white, 0.2);
     color: $white;
     @include shadow-base($black);

@@ -1,14 +1,16 @@
 $_white: #ffffff;
+$_white-pale: #f6f2f2;
 $_black: #2d3038;
 
 $_dark-purple: #010f24;
 $_purple: #1b2444;
 $_light-purple: #4c5473;
 
-$_light-gray: #f6f2f2;
+$_light-gray: #dbdfe2;
 $_pale-gray: #E3E9EB;
 $_gray: #e0e0e0;
-$_light-blue-gray: #4E6374;
+$_bluish-dark-gray: #4E6374;
+$_bluish-darker-gray: #3a4956;
 $_transparent-light-blue-gray: #8d9ba645;
 
 $_blue-gray: #0586ad;
@@ -35,28 +37,26 @@ $_yellow: #ffff02;
 
 // ------
 
+$white: $_white;
+$black: $_black;
+$gray: $_gray;
+$dark-purple: $_dark-purple;
+
 $primary-color: $_blue;
 $primary-color-hover: $_sky-blue;
 $primary-color-pale: $_pale-blue;
 $primary-color-light: $_light-blue;
 
-$surface-color: $_light-gray;
+$surface-color: $_white-pale;
 $surface-color-foggy: $_pale-gray;
-$surface-color-dark-mod: $_light-blue-gray; //? #3a4956;
+$surface-color-dark-mod: $_bluish-dark-gray;
 
 $text-color: $_black;
 
-$white: $_white;
-$black: $_black;
-
-$gray: $_gray;
-$light-blue-gray: $_light-blue-gray;
-
-$dark-purple: $_dark-purple;
-
+$card-bg-color-dark: $_bluish-dark-gray;
 
 $tag-bg-color: $_light-gray;
-$tag-bg-color-dark-mode: $_light-blue-gray; //? #3a4956;
+$tag-bg-color-dark-mode:  $_bluish-darker-gray;
 $tag-blue: $_blue-gray;
 $tag-light-blue: $_sky-blue;
 $tag-green: $_green;
