@@ -29,7 +29,8 @@ $_project-card-height: 17rem;
     @extend %display-flex-col;
     width: $full;
     flex: 1;
-    gap: $space-xs;
+    justify-content: space-between;
+    //gap: $space-xs;
   }
 
   &__image {

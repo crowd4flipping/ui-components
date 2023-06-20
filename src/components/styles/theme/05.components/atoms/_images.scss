@@ -2,11 +2,20 @@
 @import "../../01.tools/all-tools";
 @import "../../00.settings/all-settings";
 
-.img{
-  &--md{
+.img {
+  &--sm {
+    border-radius: $br-sm;
+    overflow: hidden;
+  }
+
+  &--md {
+    border-radius: $br-base;
+    overflow: hidden;
+  }
+
+  &--lg {
     border-radius: $br-md;
     overflow: hidden;
-    display: block;
   }
 }
 

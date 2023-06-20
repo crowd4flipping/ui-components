@@ -9,6 +9,10 @@ p {
   color: $text-color;
 }
 
+img{
+  display: block;
+}
+
 h1{
   font-size: $fs-2xl;
   font-weight: $fw-bolder;
