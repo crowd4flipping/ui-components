@@ -25,17 +25,22 @@
   position: relative;
 
   &__content {
-    @extend %line-height-xs;
-
+    padding: $space-sm;
     position: absolute;
     width: $full;
-    bottom: 0rem;
-    background-color: rgba(0, 0, 0, 0.471);
-    padding: $space-base;
+    top: 0rem;
+    background: linear-gradient(0deg, transparent, #0000009a);
+
+
+    &--bottom {
+      bottom: 0rem;
+      background: linear-gradient(0deg, #0000009a, transparent);
+    }
   }
 
   &__title {
     color: $white;
+    font-size: $fs-base;
   }
 
   &__subtitle {

@@ -7,6 +7,26 @@ body {
   color: $text-color;
 }
 
+p {
+  margin: 0;
+}
+
+h1 {
+  margin: 0;
+}
+
+h2 {
+  margin: 0;
+}
+
+h3 {
+  margin: 0;
+}
+
+h4 {
+  margin: 0;
+}
+
 a {
   color: inherit;
   text-decoration: inherit;
@@ -18,11 +38,11 @@ button {
   cursor: pointer;
 }
 
-div{
+div {
   box-sizing: border-box;
 }
 
-img{
+img {
   display: block;
   object-fit: cover;
 }

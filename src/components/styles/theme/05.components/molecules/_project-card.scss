@@ -42,9 +42,13 @@ $_project-card-height: 17rem;
   }
 
   &__business-model {
-    background-color: $tag-bg-color-dark-mode;
+    background-color: $tag-bg-color; 
     font-weight: $fw-bold;
     border-radius: $br-sm;
     padding: $space-sm;
+    
+    &--dark{
+      background-color: $tag-bg-color-dark-mode;
+    }
   }
 }
