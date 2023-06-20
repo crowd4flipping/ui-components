@@ -3,13 +3,17 @@
 // Classes for structuring components
 // example: .grid, .container, .ui-list, etc.
 
+%display-flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
 %display-flex-base {
   display: flex;
   gap: $space-base;
 }
 
 %display-flex-col-base {
-  display: flex;
-  flex-direction: column;
+  @extend %display-flex-col;
   gap: $space-base;
 }

@@ -11,6 +11,7 @@ $_gray: #e0e0e0;
 $_light-blue-gray: #4E6374;
 $_transparent-light-blue-gray: #8d9ba645;
 
+$_blue-gray: #0586ad;
 $_blue: #02b3e8;
 $_sky-blue: #1ecbff;
 $_pale-blue: #9CE8FF;
@@ -26,6 +27,12 @@ $_light-whatsapp: #26c360;
 $_light-ambar: #ffdba0;
 $_light-brown: #935f00;
 
+$_light-orange: #ff7640;
+$_orange: #ff6200;
+
+$_dark-gold: #df9100;
+$_yellow: #ffff02;
+
 // ------
 
 $primary-color: $_blue;
@@ -35,6 +42,7 @@ $primary-color-light: $_light-blue;
 
 $surface-color: $_light-gray;
 $surface-color-foggy: $_pale-gray;
+$surface-color-dark-mod: $_light-blue-gray; //? #3a4956;
 
 $text-color: $_black;
 
@@ -46,3 +54,14 @@ $light-blue-gray: $_light-blue-gray;
 
 $dark-purple: $_dark-purple;
 
+
+$tag-bg-color: $_light-gray;
+$tag-bg-color-dark-mode: $_light-blue-gray; //? #3a4956;
+$tag-blue: $_blue-gray;
+$tag-light-blue: $_sky-blue;
+$tag-green: $_green;
+$tag-lime: $_lime;
+$tag-orange: $_orange;
+$tag-light-orange: $_light-orange;
+$tag-dark-yellow: $_dark-gold;
+$tag-yellow: $_yellow;

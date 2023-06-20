@@ -3,9 +3,10 @@
 @import "../../00.settings/all-settings";
 
 .img{
-  &--small{
-    border-radius: $space-base;
+  &--md{
+    border-radius: $br-md;
     overflow: hidden;
+    display: block;
   }
 }
 

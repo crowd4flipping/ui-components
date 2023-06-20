@@ -1,0 +1,38 @@
+@import "../atoms/all-atoms";
+
+$_project-card-width: 30rem;
+$_project-card-height: 17rem;
+
+.project-card {
+    @extend .card;
+    @extend .card--md;
+  
+    &--dark {
+      @extend .card--dark;
+    }
+  
+    &__content {
+      @extend %display-flex-base;
+      width: $_project-card-width;
+      height: $_project-card-height;
+    }
+  
+    &__content-left {
+      @extend %display-flex-col-base;
+      width: 40%;
+      height: $full;
+      justify-content: space-between;
+    }
+  
+    &__content-right {
+      @extend %display-flex-col;
+      width: $full;
+      flex: 1;
+      gap: $space-xs;
+    }
+  
+    &__image {
+      @extend .img--md;
+    }
+  }
+  

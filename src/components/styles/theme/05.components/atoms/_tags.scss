@@ -1,0 +1,46 @@
+@import "../../00.settings/all-settings";
+
+.tag {
+  display: inline-block;
+  font-weight: $fw-medium;
+  font-size: $fs-base;
+  padding: $space-2xs $space-sm;
+  border-radius: $br-sm;
+  background-color: $tag-bg-color;
+
+  &--blue {
+    color: $tag-blue;
+
+    &-dark-mode {
+      background-color: $tag-bg-color-dark-mode;
+      color: $tag-light-blue;
+    }
+  }
+
+  &--green {
+    color: $tag-green;
+
+    &-dark-mode {
+      background-color: $tag-bg-color-dark-mode;
+      color: $tag-lime;
+    }
+  }
+
+  &--orange {
+    color: $tag-orange;
+
+    &-dark-mode {
+      background-color: $tag-bg-color-dark-mode;
+      color: $tag-light-orange;
+    }
+  }
+
+  &--yellow {
+    color: $tag-dark-yellow;
+
+    &-dark-mode {
+      background-color: $tag-bg-color-dark-mode;
+      color: $tag-yellow;
+    }
+  }
+}
