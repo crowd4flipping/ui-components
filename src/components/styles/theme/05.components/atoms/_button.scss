@@ -42,4 +42,14 @@
       background-color: $surface-color;
     }
   }
+
+  &--sm{
+    padding: $space-2xs $space-sm;
+    font-size: $fs-sm;
+  }
+  
+  &--lg{
+    padding: $space-xs $space-base;
+    font-size: $fs-md;
+  }
 }

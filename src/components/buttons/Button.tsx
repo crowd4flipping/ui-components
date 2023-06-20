@@ -5,10 +5,12 @@ type ReactButtonProps = Pick<
   ReactComponentElement<"button">["props"],
   "children" | "type" | "onClick"
 >;
+type ButtonSize = "sm" | "md" | "lg";
 
 type ButtonProps = ReactButtonProps & {
   fullWidth?: boolean;
   variant: ButtonVariant;
+  size?: ButtonSize;
 };
 
 export const Button = ({
@@ -17,6 +19,7 @@ export const Button = ({
   type = "button",
   fullWidth = false,
   variant,
+  size = "md",
 }: ButtonProps) => {
   const width = fullWidth && "btn--full-width";
 
@@ -24,7 +27,7 @@ export const Button = ({
     <button
       onClick={onClick}
       type={type}
-      className={`btn ${buttonStyle(variant)} ${width}`}
+      className={`btn ${buttonStyle(variant)} ${width} ${btnSize(size)}`}
     >
       {children}
     </button>
@@ -34,5 +37,10 @@ export const Button = ({
     if (variant == "primary") return "btn--primary";
     if (variant == "secondary") return "btn--secondary";
     if (variant == "tertiary") return "btn--tertiary";
+  }
+
+  function btnSize(buttonSize: ButtonSize) {
+    if (buttonSize === "sm") return "btn--sm";
+    if (buttonSize === "lg") return "btn--lg";
   }
 };

@@ -33,5 +33,5 @@ export const ProjectTag = ({ status, isDarkMode = true }: ProjectTagProps) => {
     ),
   };
 
-  return projectTag[status];
+  return <div>{projectTag[status]}</div>;
 };
