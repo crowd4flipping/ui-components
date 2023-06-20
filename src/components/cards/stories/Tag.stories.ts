@@ -16,5 +16,33 @@ export const TagBlue: Story = {
   args: {
     color: "blue",
     children: "Blue tag",
+    isDarkMode: false,
+  },
+};
+
+export const TagGreen: Story = {
+  name: "Tag Green",
+  args: {
+    color: "green",
+    children: "Green tag",
+    isDarkMode: false,
+  },
+};
+
+export const TagOrange: Story = {
+  name: "Tag Orange",
+  args: {
+    color: "orange",
+    children: "Orange tag",
+    isDarkMode: false,
+  },
+};
+
+export const TagYellow: Story = {
+  name: "Tag Yellow",
+  args: {
+    color: "yellow",
+    children: "Yellow tag",
+    isDarkMode: false,
   },
 };
