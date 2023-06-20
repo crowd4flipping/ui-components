@@ -1,0 +1,63 @@
+@use "../../04.objects/all-objects";
+@import "../../01.tools/all-tools";
+@import "../../00.settings/all-settings";
+
+$_project-card-width: 30rem;
+$_project-card-height: 17rem;
+
+.card {
+  padding: $space-md;
+  border-radius: $br-md;
+  background-color: $white;
+  display: inline-block;
+
+  @include shadow-base($gray);
+}
+
+.project-card {
+  background-color: $white;
+  border: $bw-sm solid $white;
+  padding: $space-sm;
+  border-radius: $br-md;
+  display: inline-block;
+  @include shadow-base($gray);
+
+  &--dark {
+    background-color: $light-blue-gray;
+    border: $bw-sm solid rgba($white, 0.2);
+    color: $white;
+    padding: $space-sm;
+    border-radius: $br-md;
+    @include shadow-base($black);
+  }
+
+  &__content {
+    @extend %display-flex-base;
+    width: $_project-card-width;
+    height: $_project-card-height;
+  }
+
+  &__content-left {
+    @extend %display-flex-col-base;
+    width: 40%;
+    height: $full;
+    justify-content: space-between;
+  }
+
+  &__content-right {
+    width: $full;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+
+  &__image {
+    border-radius: $br-md;
+    width: $full;
+    object-fit: cover;
+    overflow: hidden;
+
+     width: 100%; 
+     height: 100%; 
+  }
+}

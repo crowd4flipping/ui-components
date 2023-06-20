@@ -1,0 +1,35 @@
+@use "../../04.objects/all-objects";
+@import "../../01.tools/all-tools";
+@import "../../00.settings/all-settings";
+
+.img{
+  &--small{
+    border-radius: $space-base;
+    overflow: hidden;
+  }
+}
+
+.img-wrapper-title {
+  width: fit-content;
+  height: fit-content;
+  position: relative;
+
+  &__content {
+    @extend %line-height-xs;
+
+    position: absolute;
+    width: $full;
+    bottom: 0rem;
+    background-color: rgba(0, 0, 0, 0.471);
+    padding: $space-base;
+  }
+
+  &__title {
+    color: $white;
+  }
+
+  &__subtitle {
+    color: $white;
+    font-size: $fs-sm;
+  }
+}

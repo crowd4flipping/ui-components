@@ -7,7 +7,8 @@ $_light-purple: #4c5473;
 
 $_light-gray: #f6f2f2;
 $_pale-gray: #E3E9EB;
-$_light-blue-gray: #8d9ba680;
+$_gray: #e0e0e0;
+$_light-blue-gray: #4E6374;
 $_transparent-light-blue-gray: #8d9ba645;
 
 $_blue: #02b3e8;
@@ -36,5 +37,12 @@ $surface-color: $_light-gray;
 $surface-color-foggy: $_pale-gray;
 
 $text-color: $_black;
+
 $white: $_white;
+$black: $_black;
+
+$gray: $_gray;
+$light-blue-gray: $_light-blue-gray;
+
+$dark-purple: $_dark-purple;
 

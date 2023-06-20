@@ -1,7 +1,12 @@
-import React, { ReactComponentElement } from "react";
+import React, { ReactComponentElement, ReactElement } from "react";
 
 type ButtonVariant = "primary" | "secondary" | "tertiary";
-type ReactButtonProps = ReactComponentElement<"button">["props"] & {
+type ReactButtonProps = Pick<
+  ReactComponentElement<"button">["props"],
+  "children" | "type" | "onClick"
+>;
+
+type ButtonProps = ReactButtonProps & {
   fullWidth?: boolean;
   variant: ButtonVariant;
 };
@@ -12,7 +17,7 @@ export const Button = ({
   type = "button",
   fullWidth = false,
   variant,
-}: ReactButtonProps) => {
+}: ButtonProps) => {
   const width = fullWidth && "btn--full-width";
 
   return (
