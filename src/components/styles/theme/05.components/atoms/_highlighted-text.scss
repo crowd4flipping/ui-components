@@ -1,0 +1,18 @@
+@import "../../00.settings/all-settings";
+
+.highlighted-text {
+  @extend %padding-sm;
+  
+  background-color: $tag-bg-color;
+  border-radius: $br-sm;
+
+  &--dark-mode {
+    background-color: $tag-bg-color-dark-mode;
+    color: $white;
+  }
+
+  &--xs {
+    @extend %padding-xs;
+    border-radius: $br-sm;
+  }
+}

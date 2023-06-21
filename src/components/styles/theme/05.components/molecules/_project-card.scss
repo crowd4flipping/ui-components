@@ -13,24 +13,23 @@ $_project-card-height: 17rem;
   }
 
   &__content {
-    @extend %display-flex-base;
+    @extend %flex-base;
     width: $_project-card-width;
     height: $_project-card-height;
   }
 
   &__content-left {
-    @extend %display-flex-col-base;
+    @extend %flex-col-base;
     width: 40%;
     height: $full;
     justify-content: space-between;
   }
 
   &__content-right {
-    @extend %display-flex-col;
+    @extend %flex-col;
     width: $full;
     flex: 1;
     justify-content: space-between;
-    //gap: $space-xs;
   }
 
   &__image {
@@ -38,17 +37,14 @@ $_project-card-height: 17rem;
   }
 
   &__header {
-    @extend %display-flex-col-base;
+    @extend %flex-col-base;
   }
 
   &__business-model {
-    background-color: $tag-bg-color; 
-    font-weight: $fw-bold;
-    border-radius: $br-sm;
-    padding: $space-sm;
+    @extend .highlighted-text;
     
-    &--dark{
-      background-color: $tag-bg-color-dark-mode;
+    &--dark {
+      @extend .highlighted-text--dark-mode;
     }
   }
 }

@@ -1,0 +1,16 @@
+@import "../00.settings/all-settings";
+
+%flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+%flex-base {
+  display: flex;
+  gap: $space-base;
+}
+
+%flex-col-base {
+  @extend %flex-col;
+  gap: $space-base;
+}
