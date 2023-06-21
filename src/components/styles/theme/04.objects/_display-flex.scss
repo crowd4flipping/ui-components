@@ -10,14 +10,19 @@
   align-items: center;
 }
 
+%flex-base {
+  display: flex;
+  gap: $space-base;
+}
+
 %flex-col {
   display: flex;
   flex-direction: column;
 }
 
-%flex-base {
-  display: flex;
-  gap: $space-base;
+%flex-col-xs {
+  @extend %flex-col;
+  gap: $space-xs;
 }
 
 %flex-col-base {

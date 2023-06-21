@@ -20,12 +20,12 @@ export const InnerBar = (props: InnerBarProps) => {
 
   const maxAmountColor = isDarkMode && "inner-bar__max-amount--dark-mode";
   const percentageColor =
-    isDarkMode && "inner-bar__percentage-funded--dark-mode";
+    isDarkMode && "inner-bar__bar--dark-mode";
 
   return (
     <>
       <div
-        className="inner-bar__bar-wrapper"
+        className="inner-bar__amount-wrapper"
         style={{
           width: `${percentageToFund + 102}%`,
         }}
@@ -35,8 +35,8 @@ export const InnerBar = (props: InnerBarProps) => {
         </span>
       </div>
       {percentageFunded >= 15 && (
-        <div className="inner-bar__percentage-wrapper">
-          <span className={`inner-bar__percentage-funded ${percentageColor}`}>
+        <div className="inner-bar__bar-wrapper">
+          <span className={`inner-bar__bar ${percentageColor}`}>
             {percentageFunded}%
           </span>
         </div>

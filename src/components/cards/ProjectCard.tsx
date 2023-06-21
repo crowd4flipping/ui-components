@@ -74,7 +74,7 @@ export const ProjectCard = (props: Props) => {
             </ImageWrapperDescription>
           </div>
           <LinkButton size="sm" fullWidth variant="secondary" href={href}>
-            Link button
+            Ver proyecto
           </LinkButton>
         </>
       }

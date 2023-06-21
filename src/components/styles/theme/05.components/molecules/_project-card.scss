@@ -64,6 +64,26 @@ $_project-card-height: 17rem;
       color: $lime;
     }
   }
+
+  &__divider {
+    width: $full;
+    border: 0.5px solid $surface-color-foggy;
+    
+    
+    &--dark-mode {
+      border:  0.5px solid rgba($white, 0.2);
+    }
+  }
+
+  &__in-study-content {
+    @extend %flex-col-xs;
+    /* display: flex;
+    flex-direction: column;
+    gap: 0.4rem; */
+    /* font-size: 0.9rem; */
+    /* font-size: $fs-sm; */
+    text-align: start;
+  }
 }
 
 .progress-bar {
@@ -83,6 +103,7 @@ $_project-card-height: 17rem;
 
   &--dark-mode {
     background-color: $tag-bg-color-dark-mode;
+    //color: $white;
   }
 
   &__bar {
@@ -111,20 +132,20 @@ $_project-card-height: 17rem;
 }
 
 .inner-bar {
-  &__bar-wrapper {
+  &__amount-wrapper {
     position: absolute;
     top: 0;
     height: $full;
   }
 
-  &__percentage-wrapper {
+  &__bar-wrapper {
     display: flex;
     justify-content: flex-end;
     align-items: center;
     height: $full;
   }
 
-  &__percentage-funded {
+  &__bar {
     font-size: calc($fs-sm - 0.1rem);
     margin-left: $space-xs;
     font-weight: $fw-bold;

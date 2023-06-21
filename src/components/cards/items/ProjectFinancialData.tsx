@@ -2,6 +2,7 @@ import React from "react";
 import { ProjectTag } from "../ProjectTag";
 import { MoneyFormatter } from "../../../utils/MoenyFormatter";
 import { FundedProgressBar } from "./FundedProgressBar";
+import { ProjectInStudyInfo } from "./ProjectInStudyInfo";
 
 type ProjectStatus = Parameters<typeof ProjectTag>[number]["status"];
 
@@ -10,7 +11,6 @@ type ProjectFinancialDataProps = {
   totalProjectAmount: number;
   currentAmount: number;
   profitability: string;
-  isHorizontal?: boolean;
   isDarkMode?: boolean;
 };
 
@@ -20,12 +20,14 @@ export const ProjectFinancialData = (props: ProjectFinancialDataProps) => {
     totalProjectAmount,
     profitability,
     currentAmount,
-    isHorizontal = false,
     isDarkMode = false,
   } = props;
 
   const dataColor = isDarkMode && "financial-data__data--dark-mode";
   const formatedAmount = MoneyFormatter.round(totalProjectAmount);
+
+  if (status === "in_study")
+    return <ProjectInStudyInfo isDarkMode={isDarkMode} />;
 
   return (
     <dl className="financial-data">
