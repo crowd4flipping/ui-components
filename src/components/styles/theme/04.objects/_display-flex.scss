@@ -1,5 +1,15 @@
 @import "../00.settings/all-settings";
 
+%flex-space-between{
+  display: flex;
+  justify-content: space-between;
+}
+
+%flex-space-between-center{
+  @extend %flex-space-between;
+  align-items: center;
+}
+
 %flex-col {
   display: flex;
   flex-direction: column;

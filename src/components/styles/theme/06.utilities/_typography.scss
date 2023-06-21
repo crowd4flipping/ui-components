@@ -1,0 +1,17 @@
+@import "../00.settings/all-settings";
+
+.fs {
+  &--sm {
+    font-size: $fs-sm;
+  }
+
+  &--base {
+    font-size: $fs-base;
+  }
+}
+
+.fc {
+  &--white {
+    color: $white;
+  }
+}

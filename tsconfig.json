@@ -10,10 +10,10 @@
     "allowSyntheticDefaultImports": true,
     "emitDeclarationOnly": true,
     "baseUrl": ".",
-    "paths": {
+    /* "paths": {
       "@/src/*": ["./src/*"],
       "@/styles/*": ["./src/components/styles/*"]
-    },
+    }, */
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "strict": true,

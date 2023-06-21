@@ -1,5 +1,6 @@
-@import "../atoms/all-atoms";
+@import "../../00.settings/all-settings";
 @import "../../04.objects/all-objects";
+@import "../atoms/all-atoms";
 
 $_project-card-width: 30rem;
 $_project-card-height: 17rem;
@@ -42,9 +43,107 @@ $_project-card-height: 17rem;
 
   &__business-model {
     @extend .highlighted-text;
-    
+
     &--dark {
       @extend .highlighted-text--dark-mode;
+    }
+  }
+}
+
+.financial-data {
+  @extend %flex-col-base;
+  flex: 1;
+  font-size: $fs-base;
+
+  &__data {
+    font-size: $fs-md;
+    font-weight: $fw-bold;
+    color: $light-green;
+
+    &--dark-mode {
+      color: $lime;
+    }
+  }
+}
+
+.progress-bar {
+  margin-top: 0.2rem;
+  height: 1.5rem;
+  position: relative;
+
+  width: $full;
+  border-radius: 3rem;
+
+  background-color: $tag-bg-color;
+
+  overflow: hidden;
+  padding: $space-2xs;
+
+  @extend %flex-space-between-center;
+
+  &--dark-mode {
+    background-color: $tag-bg-color-dark-mode;
+  }
+
+  &__bar {
+    position: relative;
+    overflow: hidden;
+    background-color: $primary-color;
+    height: $full;
+    border-radius: 3rem;
+
+    &--dark-mode {
+      background-color: $white;
+    }
+  }
+
+  &__max-amount {
+    font-size: calc($fs-sm - 0.1rem);
+    color: $text-color;
+    margin-right: $space-base;
+    position: absolute;
+    right: 0;
+
+    &--dark-mode {
+      color: $white;
+    }
+  }
+}
+
+.inner-bar {
+  &__bar-wrapper {
+    position: absolute;
+    top: 0;
+    height: $full;
+  }
+
+  &__percentage-wrapper {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: $full;
+  }
+
+  &__percentage-funded {
+    font-size: calc($fs-sm - 0.1rem);
+    margin-left: $space-xs;
+    font-weight: $fw-bold;
+    position: absolute;
+    left: 0;
+    color: white;
+
+    &--dark-mode {
+      color: $tag-bg-color-dark-mode;
+    }
+  }
+
+  &__max-amount {
+    margin-top: 0.07rem;
+    @extend .progress-bar__max-amount;
+    color: white;
+
+    &--dark-mode {
+      color: $tag-bg-color-dark-mode;
     }
   }
 }

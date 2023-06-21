@@ -24,5 +24,8 @@ export const MyProjectCard: Story = {
     businessModel: "Renting",
     status: "active",
     src: imageUrl(),
+    currentAmount: 50000,
+    totalProjectAmount: 150000,
+    profitability: "13"
   },
 };
