@@ -1,5 +1,5 @@
 import type { StoryObj, Meta } from "@storybook/react";
-import { ImageWrapperDescription } from "./ImageWrapperDescription";
+import { ImageWrapperDescription } from "../../../components/images/ImageWrapperDescription";
 import React from "react";
 
 const meta = {
