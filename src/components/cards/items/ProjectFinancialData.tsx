@@ -24,29 +24,31 @@ export const ProjectFinancialData = (props: ProjectFinancialDataProps) => {
   } = props;
 
   const dataColor = isDark && "project-card-financial-data__data--dark-mode";
+  const infoColor = isDark && "project-card-financial-data__info--dark-mode";
   const formatedAmount = MoneyFormatter.round(totalProjectAmount);
 
-  if (status === "in_study") return <ProjectInStudyInfo withDivider isDark={isDark} />;
+  if (status === "in_study")
+    return <ProjectInStudyInfo withDivider isDark={isDark} />;
 
   return (
-    <dl className="project-card-financial-data">
+    <div className="project-card-financial-data">
       {status == "funding" && (
-        <div>
+        <dl>
           <dt>Objetivo</dt>
           <dd className={`project-card-financial-data__data ${dataColor}`}>
             {formatedAmount}
           </dd>
-        </div>
+        </dl>
       )}
 
-      <div>
+      <dl>
         <dt>Rentabilidad anual</dt>
         <dd className={`project-card-financial-data__data ${dataColor}`}>
           {profitability}%
         </dd>
-      </div>
+      </dl>
 
-      <div>
+      <dl>
         <dt>Recaudado</dt>
         {status == "funding" ? (
           <FundedProgressBar
@@ -59,7 +61,18 @@ export const ProjectFinancialData = (props: ProjectFinancialDataProps) => {
             {formatedAmount}
           </dd>
         )}
-      </div>
-    </dl>
+      </dl>
+
+      {status == "active" && (
+        <span className={`project-card-financial-data__info ${infoColor}`}>
+          Este proyecto ya está en ejecución
+        </span>
+      )}
+      {status == "finished" && (
+        <span className={`project-card-financial-data__info ${infoColor}`}>
+          Este proyecto ya ha sido explotado
+        </span>
+      )}
+    </div>
   );
 };
