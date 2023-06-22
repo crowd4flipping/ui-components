@@ -5,7 +5,7 @@ type InnerBarProps = {
   percentageFunded: number;
   percentageToFund: number;
   remainingAmountToFund: number;
-  isDarkMode: boolean;
+  isDark: boolean;
 };
 
 export const InnerBar = (props: InnerBarProps) => {
@@ -13,14 +13,14 @@ export const InnerBar = (props: InnerBarProps) => {
     percentageFunded,
     percentageToFund,
     remainingAmountToFund,
-    isDarkMode = false,
+    isDark = false,
   } = props;
 
   const roundMoney = MoneyFormatter.withUnitySufix(remainingAmountToFund);
 
-  const maxAmountColor = isDarkMode && "inner-bar__max-amount--dark-mode";
+  const maxAmountColor = isDark && "inner-bar__max-amount--dark-mode";
   const percentageColor =
-    isDarkMode && "inner-bar__bar--dark-mode";
+    isDark && "inner-bar__bar--dark-mode";
 
   return (
     <>

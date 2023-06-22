@@ -16,7 +16,7 @@ export const ProjectCardVerticalLayout = ({
   return (
     <div className={`project-card ${cardColor}`}>
       <div className="project-card__content--vertical">
-        <div /* className={styles.projectCard_top} */>{top}</div>
+        <div>{top}</div>
         <div className="project-card__content-bottom">{bottom}</div>
       </div>
     </div>

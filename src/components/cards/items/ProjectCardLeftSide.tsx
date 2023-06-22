@@ -35,7 +35,7 @@ export const ProjectCardLeftSide = (props: ProjectCardLeftSideProps) => {
         currentAmount={currentAmount}
         profitability={profitability}
         totalProjectAmount={totalProjectAmount}
-        isDarkMode={isDark}
+        isDark={isDark}
         status={status}
       />
     </>

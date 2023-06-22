@@ -11,7 +11,7 @@ type ProjectFinancialDataProps = {
   totalProjectAmount: number;
   currentAmount: number;
   profitability: string;
-  isDarkMode?: boolean;
+  isDark?: boolean;
 };
 
 export const ProjectFinancialData = (props: ProjectFinancialDataProps) => {
@@ -20,21 +20,20 @@ export const ProjectFinancialData = (props: ProjectFinancialDataProps) => {
     totalProjectAmount,
     profitability,
     currentAmount,
-    isDarkMode = false,
+    isDark = false,
   } = props;
 
-  const dataColor = isDarkMode && "financial-data__data--dark-mode";
+  const dataColor = isDark && "project-card-financial-data__data--dark-mode";
   const formatedAmount = MoneyFormatter.round(totalProjectAmount);
 
-  if (status === "in_study")
-    return <ProjectInStudyInfo isDarkMode={isDarkMode} />;
+  if (status === "in_study") return <ProjectInStudyInfo withDivider isDark={isDark} />;
 
   return (
-    <dl className="financial-data">
+    <dl className="project-card-financial-data">
       {status == "funding" && (
         <div>
           <dt>Objetivo</dt>
-          <dd className={`financial-data__data ${dataColor}`}>
+          <dd className={`project-card-financial-data__data ${dataColor}`}>
             {formatedAmount}
           </dd>
         </div>
@@ -42,7 +41,7 @@ export const ProjectFinancialData = (props: ProjectFinancialDataProps) => {
 
       <div>
         <dt>Rentabilidad anual</dt>
-        <dd className={`financial-data__data ${dataColor}`}>
+        <dd className={`project-card-financial-data__data ${dataColor}`}>
           {profitability}%
         </dd>
       </div>
@@ -51,12 +50,12 @@ export const ProjectFinancialData = (props: ProjectFinancialDataProps) => {
         <dt>Recaudado</dt>
         {status == "funding" ? (
           <FundedProgressBar
-            isDarkMode={isDarkMode}
+            isDark={isDark}
             currentAmount={currentAmount}
             maxAmount={totalProjectAmount}
           />
         ) : (
-          <dd className={`financial-data__data ${dataColor}`}>
+          <dd className={`project-card-financial-data__data ${dataColor}`}>
             {formatedAmount}
           </dd>
         )}

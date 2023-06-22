@@ -54,16 +54,11 @@ $_project-card-height: 17rem;
   }
 
   &__top-image-wrapper {
-   // height: 13rem;
     position: relative;
-   // border-radius: $borderRadius;
-    //width: $full;
-    //overflow: hidden;
   }
 
-  &__top-image-tag{
-    position: absolute;
-    bottom: 0;
+  &__top-image-tag {
+    @extend %position-b-0;
     margin: 0.3rem;
   }
 
@@ -84,7 +79,7 @@ $_project-card-height: 17rem;
   }
 }
 
-.financial-data {
+.project-card-financial-data {
   @extend %flex-col-base;
   flex: 1;
   font-size: $fs-base;
@@ -96,6 +91,15 @@ $_project-card-height: 17rem;
 
     &--dark-mode {
       color: $lime;
+    }
+  }
+
+  &__info {
+    font-style: italic;
+    color: $text-color;
+
+    &--dark-mode {
+      color: white;
     }
   }
 
@@ -111,6 +115,28 @@ $_project-card-height: 17rem;
   &__in-study-content {
     @extend %flex-col-xs;
     text-align: start;
+  }
+
+  &--horizontal {
+    /* font-size: 0.8rem; */
+    /* display: flex;
+    justify-content: space-between; */
+    @extend %flex-space-between;
+
+    text-align: center;
+
+    /* &_highlight {
+      font-size: 1rem;
+      font-weight: bold;
+
+      &_yield {
+        color: #63b000;
+
+        &_darkMode {
+          color: #8bf502;
+        }
+      }
+    } */
   }
 }
 
@@ -147,11 +173,10 @@ $_project-card-height: 17rem;
   }
 
   &__max-amount {
+    @extend %position-r-0;
     font-size: calc($fs-sm - 0.1rem);
     color: $text-color;
     margin-right: $space-base;
-    position: absolute;
-    right: 0;
 
     &--dark-mode {
       color: $white;
@@ -161,8 +186,7 @@ $_project-card-height: 17rem;
 
 .inner-bar {
   &__amount-wrapper {
-    position: absolute;
-    top: 0;
+    @extend %position-t-0;
     height: $full;
   }
 
@@ -174,11 +198,11 @@ $_project-card-height: 17rem;
   }
 
   &__bar {
+    @extend %position-l-0;
+
     font-size: calc($fs-sm - 0.1rem);
     margin-left: $space-xs;
     font-weight: $fw-bold;
-    position: absolute;
-    left: 0;
     color: white;
 
     &--dark-mode {

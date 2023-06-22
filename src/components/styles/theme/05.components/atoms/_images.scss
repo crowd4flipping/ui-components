@@ -25,10 +25,9 @@
   position: relative;
 
   &__content {
+    @extend %position-t-0;
     padding: $space-sm;
-    position: absolute;
     width: $full;
-    top: 0rem;
     background: linear-gradient(0deg, transparent, #0000009a);
 
 

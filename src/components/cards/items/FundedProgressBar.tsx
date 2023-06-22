@@ -5,13 +5,13 @@ import { InnerBar } from "./InnerBar";
 type FundedProgressBarProps = {
   maxAmount: number;
   currentAmount: number;
-  isDarkMode: boolean;
+  isDark: boolean;
 };
 
 type Amounts = { currentAmount: number; maxAmount: number };
 
 export const FundedProgressBar = (props: FundedProgressBarProps) => {
-  const { currentAmount, maxAmount, isDarkMode } = props;
+  const { currentAmount, maxAmount, isDark } = props;
 
   const roundMoney = getRoundedMoney({ currentAmount, maxAmount });
 
@@ -25,9 +25,9 @@ export const FundedProgressBar = (props: FundedProgressBarProps) => {
     maxAmount,
   });
 
-  const progressbarColor = isDarkMode && "progress-bar--dark-mode";
-  const progressColor = isDarkMode && "progress-bar__bar--dark-mode";
-  const maxAmountColor = isDarkMode && "progress-bar__max-amount--dark-mode";
+  const progressbarColor = isDark && "progress-bar--dark-mode";
+  const progressColor = isDark && "progress-bar__bar--dark-mode";
+  const maxAmountColor = isDark && "progress-bar__max-amount--dark-mode";
 
   return (
     <div className={`progress-bar ${progressbarColor}`}>
@@ -40,7 +40,7 @@ export const FundedProgressBar = (props: FundedProgressBarProps) => {
         style={{ width: `${percentageFunded}%` }}
       >
         <InnerBar
-          isDarkMode={isDarkMode}
+          isDark={isDark}
           percentageFunded={percentageFunded}
           percentageToFund={percentageToFund}
           remainingAmountToFund={remainingAmount}

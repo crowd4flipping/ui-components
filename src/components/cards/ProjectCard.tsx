@@ -4,6 +4,7 @@ import { ProjectCardRightSide } from "./items/ProjectCardRightSide";
 import { ProjectCardLeftSide } from "./items/ProjectCardLeftSide";
 import { ProjectCardVerticalLayout } from "./items/ProjectCardVerticalLayout";
 import { ProjectCardTopImage } from "./items/ProjectCardTopImage";
+import { ProjectCardBottomSide } from "./items/ProjectCardBottomSide";
 
 type ProjectCardLeftSideProps = Parameters<typeof ProjectCardLeftSide>[number];
 type ProjectCardRightSideProps = Parameters<
@@ -23,8 +24,8 @@ export const ProjectCard = (props: Props) => {
     return (
       <ProjectCardVerticalLayout
         isDark={isDark}
-        top={<ProjectCardTopImage {...props} projectStatus={props.status} />}
-        bottom={<div></div>}
+        top={<ProjectCardTopImage {...props} />}
+        bottom={<ProjectCardBottomSide {...props} />}
       />
     );
 

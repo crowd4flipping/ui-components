@@ -3,10 +3,10 @@ import { Button } from "./Button";
 
 type LinkButtonVariant = Parameters<typeof Button>[number]["variant"];
 type LinkButtonSize = Parameters<typeof Button>[number]["size"];
-type LinkButtonProps = Parameters<typeof Button>[number] & {
+
+type LinkButtonProps = Omit<Parameters<typeof Button>[number], "type"> & {
   href: string;
   newTab?: boolean;
-  size?: LinkButtonSize
 };
 
 export const LinkButton = ({
