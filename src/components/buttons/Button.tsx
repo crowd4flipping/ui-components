@@ -1,4 +1,4 @@
-import React, { ReactComponentElement, ReactElement } from "react";
+import React, { ReactComponentElement } from "react";
 
 type ButtonVariant = "primary" | "secondary" | "tertiary";
 type ReactButtonProps = Pick<

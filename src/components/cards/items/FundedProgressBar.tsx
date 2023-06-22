@@ -1,5 +1,5 @@
 import React from "react";
-import { MoneyFormatter } from "../../../utils/MoenyFormatter";
+import { MoneyFormatter } from "../../../utils/MoneyFormatter";
 import { InnerBar } from "./InnerBar";
 
 type FundedProgressBarProps = {

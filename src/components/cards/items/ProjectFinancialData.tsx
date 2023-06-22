@@ -1,6 +1,6 @@
 import React from "react";
 import { ProjectTag } from "../ProjectTag";
-import { MoneyFormatter } from "../../../utils/MoenyFormatter";
+import { MoneyFormatter } from "../../../utils/MoneyFormatter";
 import { FundedProgressBar } from "./FundedProgressBar";
 import { ProjectInStudyInfo } from "./ProjectInStudyInfo";
 

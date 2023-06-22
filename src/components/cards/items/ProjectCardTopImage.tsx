@@ -1,7 +1,7 @@
 import React, { ReactElement } from "react";
 import { ProjectCardImage } from "./ProjectCardImage";
 import { ProjectTag } from "../ProjectTag";
-import { ImageWrapperDescription } from "../../image/ImageWrapperDescription";
+import { ImageWrapperDescription } from "../../images/ImageWrapperDescription";
 
 type ProjectCardTopImageProps = {
   region: string;

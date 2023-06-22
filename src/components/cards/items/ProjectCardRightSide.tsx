@@ -1,6 +1,6 @@
 import React, { ReactElement } from "react";
 import { LinkButton } from "../../buttons";
-import { ImageWrapperDescription } from "../../image/ImageWrapperDescription";
+import { ImageWrapperDescription } from "../../images/ImageWrapperDescription";
 import { ProjectCardImage } from "./ProjectCardImage";
 
 type ProjectCardRightSide = {

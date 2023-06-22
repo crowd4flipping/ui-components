@@ -1,7 +1,7 @@
 import React from "react";
 import { FundedProgressBar } from "./FundedProgressBar";
 import { ProjectInStudyInfo } from "./ProjectInStudyInfo";
-import { MoneyFormatter } from "../../../utils/MoenyFormatter";
+import { MoneyFormatter } from "../../../utils/MoneyFormatter";
 
 type Props = {
   status: Project.Status;
