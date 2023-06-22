@@ -1,6 +1,7 @@
 import React from "react";
 import { FundedProgressBar } from "./FundedProgressBar";
 import { ProjectInStudyInfo } from "./ProjectInStudyInfo";
+import { MoneyFormatter } from "../../../utils/MoenyFormatter";
 
 type Props = {
   status: Project.Status;
@@ -16,7 +17,8 @@ export const HorizontalFinancialData = (props: Props) => {
 
   const dataColor = isDark && "project-card-financial-data__data--dark-mode";
   const infoColor = isDark && "project-card-financial-data__info--dark-mode";
-  const dividerColor = isDark && "project-card__divider--dark-mode";
+
+  const formatedAmount = MoneyFormatter.round(totalProjectAmount);
 
   if (status == "in_study")
     return <ProjectInStudyInfo withDivider={false} isDark={isDark} />;
@@ -35,7 +37,7 @@ export const HorizontalFinancialData = (props: Props) => {
             <>
               <dt>Objetivo</dt>
               <dd className={`project-card-financial-data__data ${dataColor}`}>
-                {totalProjectAmount}
+                {formatedAmount}
               </dd>
             </>
           ) : (
