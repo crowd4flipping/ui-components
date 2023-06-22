@@ -1,16 +1,14 @@
 {
   "name": "ui-components",
   "version": "0.0.0",
+  "author": "Fernando Gonzalez",
+  "license": "ISC",
   "description": "The official React components library of Crowd4Flipping (aka C4F)",
-  "main": "index.js",
-  "type": "module",
   "scripts": {
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "build": "rollup -c"
   },
-  "author": "Fernando Gonzalez",
-  "license": "ISC",
   "devDependencies": {
     "@rollup/plugin-commonjs": "^25.0.1",
     "@rollup/plugin-node-resolve": "^15.1.0",
@@ -35,5 +33,11 @@
   },
   "dependencies": {
     "rollup-plugin-postcss": "^4.0.2"
-  }
+  },
+  "module": "dist/index.esm.js",
+  "files": [
+    "dist"
+  ],
+  "types": "dist/index.d.ts",
+  "type": "module"
 }
