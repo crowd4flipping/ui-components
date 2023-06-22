@@ -19,6 +19,9 @@ const imageUrl = () => {
 export const MyProjectCard: Story = {
   name: "Project card",
   args: {
+    region: "Baleares, Palma",
+    street: "C/ Santiago el hermoso",
+    isVertical: false,
     href: "https://crowd4flipping.com/",
     isDark: true,
     businessModel: "Renting",
@@ -26,6 +29,6 @@ export const MyProjectCard: Story = {
     src: imageUrl(),
     currentAmount: 50000,
     totalProjectAmount: 150000,
-    profitability: "13"
+    profitability: "13",
   },
 };

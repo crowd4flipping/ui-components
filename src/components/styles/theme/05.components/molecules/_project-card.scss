@@ -3,13 +3,14 @@
 @import "../atoms/all-atoms";
 
 $_project-card-width: 30rem;
+$_project-card-vertical-width: 17rem;
 $_project-card-height: 17rem;
 
 .project-card {
   @extend .card;
   @extend .card--md;
 
-  &--dark {
+  &--dark-mode {
     @extend .card--dark;
   }
 
@@ -17,6 +18,14 @@ $_project-card-height: 17rem;
     @extend %flex-base;
     width: $_project-card-width;
     height: $_project-card-height;
+
+    &--vertical {
+      width: $_project-card-vertical-width;
+
+      /* display: flex;
+      flex-direction: column; */
+      @extend %flex-col;
+    }
   }
 
   &__content-left {
@@ -31,6 +40,31 @@ $_project-card-height: 17rem;
     width: $full;
     flex: 1;
     justify-content: space-between;
+  }
+
+  &__content-bottom {
+    /* display: flex;
+    flex-direction: column;
+    gap: 1rem; */
+    @extend %flex-col-base;
+
+    justify-content: space-between;
+    height: $full;
+    //background-color: red;
+  }
+
+  &__top-image-wrapper {
+   // height: 13rem;
+    position: relative;
+   // border-radius: $borderRadius;
+    //width: $full;
+    //overflow: hidden;
+  }
+
+  &__top-image-tag{
+    position: absolute;
+    bottom: 0;
+    margin: 0.3rem;
   }
 
   &__image {
@@ -68,20 +102,14 @@ $_project-card-height: 17rem;
   &__divider {
     width: $full;
     border: 0.5px solid $surface-color-foggy;
-    
-    
+
     &--dark-mode {
-      border:  0.5px solid rgba($white, 0.2);
+      border: 0.5px solid rgba($white, 0.2);
     }
   }
 
   &__in-study-content {
     @extend %flex-col-xs;
-    /* display: flex;
-    flex-direction: column;
-    gap: 0.4rem; */
-    /* font-size: 0.9rem; */
-    /* font-size: $fs-sm; */
     text-align: start;
   }
 }

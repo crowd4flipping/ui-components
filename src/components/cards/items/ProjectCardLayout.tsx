@@ -1,7 +1,7 @@
 import React, { ReactElement } from "react";
 
 type ProjectLayoutProps = {
-  isDark?: boolean;
+  isDark: boolean;
   leftSide: ReactElement;
   rightSide: ReactElement;
 };
@@ -11,7 +11,7 @@ export const ProjectCardLayout = ({
   leftSide,
   rightSide,
 }: ProjectLayoutProps) => {
-  const variant = isDark && "project-card--dark";
+  const variant = isDark && "project-card--dark-mode";
   
   return (
     <div className={`project-card ${variant}`}>

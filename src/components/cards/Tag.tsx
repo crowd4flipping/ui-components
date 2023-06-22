@@ -7,10 +7,10 @@ type TagColorLightMod = (typeof tagColors)[number];
 type TagProps = {
   children: string;
   color: TagColorLightMod;
-  isDarkMode?: boolean;
+  isDark?: boolean;
 };
 
-export const Tag = ({ children, color, isDarkMode = false }: TagProps) => {
+export const Tag = ({ children, color, isDark = false }: TagProps) => {
   const lightModeColors: Record<TagColorLightMod, string> = {
     blue: "tag--blue",
     green: "tag--green",
@@ -25,7 +25,7 @@ export const Tag = ({ children, color, isDarkMode = false }: TagProps) => {
   );
 
   function getColor(color: TagColorLightMod) {
-    return isDarkMode
+    return isDark
       ? `${lightModeColors[color]}-dark-mode`
       : lightModeColors[color];
   }

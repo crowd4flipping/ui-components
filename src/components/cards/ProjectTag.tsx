@@ -5,29 +5,29 @@ type ProjectStatus = "in_study" | "funding" | "active" | "finished";
 
 type ProjectTagProps = {
   status: ProjectStatus;
-  isDarkMode?: boolean;
+  isDark?: boolean;
 };
 
-export const ProjectTag = ({ status, isDarkMode = true }: ProjectTagProps) => {
+export const ProjectTag = ({ status, isDark = true }: ProjectTagProps) => {
 
   const projectTag: Record<ProjectStatus, ReactElement> = {
     in_study: (
-      <Tag color="blue" isDarkMode={isDarkMode}>
+      <Tag color="blue" isDark={isDark}>
         En estudio
       </Tag>
     ),
     funding: (
-      <Tag color="green" isDarkMode={isDarkMode}>
+      <Tag color="green" isDark={isDark}>
         En financiación
       </Tag>
     ),
     active: (
-      <Tag color="yellow" isDarkMode={isDarkMode}>
+      <Tag color="yellow" isDark={isDark}>
         Activo
       </Tag>
     ),
     finished: (
-      <Tag color="orange" isDarkMode={isDarkMode}>
+      <Tag color="orange" isDark={isDark}>
         Finalizado
       </Tag>
     ),
