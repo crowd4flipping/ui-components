@@ -3,6 +3,7 @@ import commonjs from "@rollup/plugin-commonjs";
 import typescript from "@rollup/plugin-typescript";
 import dts from "rollup-plugin-dts";
 import postcss from "rollup-plugin-postcss";
+//import scss from "rollup-plugin-scss";
 
 export default [
   {
@@ -21,6 +22,7 @@ export default [
       resolve(),
       commonjs(),
       typescript({ tsconfig: "./tsconfig.json" }),
+      //scss(),
       postcss({
         plugins: [],
       }),
@@ -30,5 +32,6 @@ export default [
     input: "dist/types/index.d.ts",
     output: [{ file: "dist/index.d.ts", format: "esm" }],
     plugins: [dts()],
+    external: [/\.scss$/],
   },
 ];
