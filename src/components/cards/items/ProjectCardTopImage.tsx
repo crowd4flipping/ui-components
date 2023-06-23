@@ -2,11 +2,12 @@ import React, { ReactElement } from "react";
 import { ProjectCardImage } from "./ProjectCardImage";
 import { ProjectTag } from "../ProjectTag";
 import { ImageWrapperDescription } from "../../images/ImageWrapperDescription";
+import { ProjectStatus } from "../../types/types";
 
 type ProjectCardTopImageProps = {
   region: string;
   street: string;
-  status: Project.Status;
+  status: ProjectStatus;
   isDark: boolean;
   src: string | ReactElement;
 };

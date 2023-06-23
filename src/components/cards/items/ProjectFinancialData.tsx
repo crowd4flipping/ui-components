@@ -1,10 +1,9 @@
 import React from "react";
-import { ProjectTag } from "../ProjectTag";
 import { MoneyFormatter } from "../../../utils/MoneyFormatter";
 import { FundedProgressBar } from "./FundedProgressBar";
 import { ProjectInStudyInfo } from "./ProjectInStudyInfo";
+import { ProjectStatus } from "../../types/types";
 
-type ProjectStatus = Parameters<typeof ProjectTag>[number]["status"];
 
 type ProjectFinancialDataProps = {
   status: ProjectStatus;

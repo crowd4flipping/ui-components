@@ -1,8 +1,7 @@
 import React, { ReactElement } from "react";
 import { Tag } from "./Tag";
 import "../styles/global.scss";
-
-type ProjectStatus = "in_study" | "funding" | "active" | "finished";
+import { ProjectStatus } from "../types/types";
 
 type ProjectTagProps = {
   status: ProjectStatus;

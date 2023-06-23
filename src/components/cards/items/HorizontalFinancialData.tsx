@@ -2,9 +2,10 @@ import React from "react";
 import { FundedProgressBar } from "./FundedProgressBar";
 import { ProjectInStudyInfo } from "./ProjectInStudyInfo";
 import { MoneyFormatter } from "../../../utils/MoneyFormatter";
+import { ProjectStatus } from "../../types/types";
 
 type Props = {
-  status: Project.Status;
+  status: ProjectStatus;
   totalProjectAmount: number;
   currentAmount: number;
   profitability: string;

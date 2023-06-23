@@ -1,10 +1,11 @@
 import React from "react";
 import { ProjectTag } from "../ProjectTag";
 import { ProjectFinancialData } from "./ProjectFinancialData";
+import { ProjectStatus } from "../../types/types";
 
 type ProjectCardLeftSideProps = {
   isDark: boolean;
-  status: Project.Status;
+  status: ProjectStatus;
   businessModel: string;
   currentAmount: number;
   totalProjectAmount: number;
