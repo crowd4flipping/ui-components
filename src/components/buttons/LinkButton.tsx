@@ -1,5 +1,6 @@
 import React from "react";
 import { Button } from "./Button";
+import "../styles/global.scss";
 
 type LinkButtonVariant = Parameters<typeof Button>[number]["variant"];
 type LinkButtonSize = Parameters<typeof Button>[number]["size"];

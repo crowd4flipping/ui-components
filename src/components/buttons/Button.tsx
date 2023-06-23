@@ -1,4 +1,5 @@
 import React, { ReactComponentElement } from "react";
+import "../styles/global.scss";
 
 type ButtonVariant = "primary" | "secondary" | "tertiary";
 type ReactButtonProps = Pick<
