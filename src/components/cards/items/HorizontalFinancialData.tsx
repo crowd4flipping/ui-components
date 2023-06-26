@@ -45,7 +45,7 @@ export const HorizontalFinancialData = (props: Props) => {
             <>
               <dt>Recaudado</dt>
               <dd className={`project-card-financial-data__data ${dataColor}`}>
-                {currentAmount}
+                {formatedAmount}
               </dd>
             </>
           )}
