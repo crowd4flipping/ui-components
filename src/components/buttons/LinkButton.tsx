@@ -26,7 +26,7 @@ export const LinkButton = ({
         variant
       )} ${width} ${btnSize(size)} inline-block cursor-pointer`}
     >
-      <a rel="noopener" target={newTab ? "_blank" : "_self"} href={href}>
+      <a  rel="noopener" target={newTab ? "_blank" : "_self"} href={href}>
         {children}
       </a>
     </div>
