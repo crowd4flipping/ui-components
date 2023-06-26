@@ -10,15 +10,15 @@
     "allowSyntheticDefaultImports": true,
     "emitDeclarationOnly": true,
     "baseUrl": ".",
-    "paths": {
+    /* "paths": {
       "@/src/*": ["./src/*"],
       "@/styles/*": ["./src/components/styles/*"]
-    },
+    }, */
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "strict": true,
     "skipLibCheck": true
   },
   "include": ["**/*.ts", "**/*.tsx", "**/*.scss", "**/*.css"],
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules", "src/stories"]
 }

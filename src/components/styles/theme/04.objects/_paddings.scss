@@ -1,0 +1,9 @@
+@import "../00.settings/all-settings";
+
+%padding-xs {
+  padding: $space-2xs $space-sm;
+}
+
+%padding-sm {
+  padding: $space-xs $space-sm;
+}

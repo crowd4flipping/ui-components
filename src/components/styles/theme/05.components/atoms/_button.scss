@@ -1,18 +1,19 @@
 @import "../../00.settings/all-settings";
 
 .btn {
-  padding: 0.5rem 0.75rem;
+  padding: $space-xs $space-sm;
   -webkit-border-radius: $br-sm;
   -moz-border-radius: $br-sm;
   border-radius: $br-sm;
   text-align: center;
   font-weight: $fw-medium;
-  transition: 0.3s;
   border: $bw-sm solid transparent;
+  
+  transition: 0.3s;
 
   &--full-width {
-    padding: 0.5rem 0rem;
-    width: 100%;
+    padding: $space-xs 0rem;
+    width: $full;
   }
 
   &--primary {
@@ -40,5 +41,15 @@
     &:hover {
       background-color: $surface-color;
     }
+  }
+
+  &--sm{
+    padding: $space-xs $space-sm;
+    font-size: $fs-sm;
+  }
+  
+  &--lg{
+    padding: $space-xs $space-base;
+    font-size: $fs-md;
   }
 }

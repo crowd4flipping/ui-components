@@ -1,0 +1,31 @@
+@import "../00.settings/all-settings";
+
+%flex-space-between{
+  display: flex;
+  justify-content: space-between;
+}
+
+%flex-space-between-center{
+  @extend %flex-space-between;
+  align-items: center;
+}
+
+%flex-base {
+  display: flex;
+  gap: $space-base;
+}
+
+%flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+%flex-col-xs {
+  @extend %flex-col;
+  gap: $space-xs;
+}
+
+%flex-col-base {
+  @extend %flex-col;
+  gap: $space-base;
+}

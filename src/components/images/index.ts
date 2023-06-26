@@ -1,0 +1,1 @@
+export { ImageWrapperDescription } from "./ImageWrapperDescription";
