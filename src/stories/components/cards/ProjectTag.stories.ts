@@ -1,10 +1,12 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { ProjectTag } from "../../../components/cards/ProjectTag";
+import { colorTheme } from "../../decorators/color-theme";
 
 const meta = {
   title: "Components/Project Tag",
   component: ProjectTag,
   tags: ["tag"],
+  decorators: [colorTheme],
 } satisfies Meta<typeof ProjectTag>;
 
 export default meta;

@@ -1,10 +1,12 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { ProjectCard } from "../../../components/cards/ProjectCard";
+import { colorTheme } from "../../decorators/color-theme";
 
 const meta = {
   title: "Components/Project Card",
   component: ProjectCard,
   tags: ["card"],
+  decorators: [colorTheme],
 } satisfies Meta<typeof ProjectCard>;
 
 export default meta;

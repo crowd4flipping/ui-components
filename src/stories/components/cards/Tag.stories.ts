@@ -1,10 +1,12 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { Tag } from "../../../components/cards/Tag";
+import { colorTheme } from "../../decorators/color-theme";
 
 const meta = {
   title: "Components/Tags",
   component: Tag,
   tags: ["tag"],
+  decorators: [colorTheme],
 } satisfies Meta<typeof Tag>;
 
 export default meta;

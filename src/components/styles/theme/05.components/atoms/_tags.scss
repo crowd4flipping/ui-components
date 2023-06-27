@@ -11,34 +11,18 @@
 
   &--blue {
     color: $tag-blue;
-
-    &-dark-mode {
-      color: $tag-light-blue !important;
-    }
   }
 
   &--green {
     color: $tag-green;
-
-    &-dark-mode {
-      color: $tag-lime !important;
-    }
   }
 
   &--orange {
     color: $tag-orange;
-
-    &-dark-mode {
-      color: $tag-light-orange !important;
-    }
   }
 
   &--yellow {
     color: $tag-dark-yellow;
-
-    &-dark-mode {
-      color: $tag-yellow !important;
-    }
   }
 }
 
