@@ -1,5 +1,6 @@
 import React, { ReactComponentElement } from "react";
 import "../styles/global.scss";
+import { element } from "prop-types";
 
 type ButtonVariant = "primary" | "secondary" | "tertiary";
 type ReactButtonProps = Pick<
@@ -28,7 +29,7 @@ export const Button = ({
     <button
       onClick={onClick}
       type={type}
-      className={`btn ${buttonStyle(variant)} ${width} ${btnSize(size)}`}
+      className={`btn ${buttonStyle(variant)} ${width} ${btnSize(size)} test-theme`}
     >
       {children}
     </button>
