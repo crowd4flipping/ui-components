@@ -21,15 +21,15 @@ export const LinkButton = ({
   const width = fullWidth && "btn--full-width";
 
   return (
-    <div
-      className={`btn ${buttonStyle(
-        variant
-      )} ${width} ${btnSize(size)} inline-block cursor-pointer`}
-    >
-      <a  rel="noopener" target={newTab ? "_blank" : "_self"} href={href}>
+    <a rel="noopener" target={newTab ? "_blank" : "_self"} href={href}>
+      <div
+        className={`btn ${buttonStyle(variant)} ${width} ${btnSize(
+          size
+        )} inline-block cursor-pointer`}
+      >
         {children}
-      </a>
-    </div>
+      </div>
+    </a>
   );
 
   function btnSize(buttonSize: LinkButtonSize) {
