@@ -7,17 +7,17 @@ $_purple: #1b2444;
 $_light-purple: #4c5473;
 
 $_light-gray: #dbdfe2;
-$_pale-gray: #E3E9EB;
+$_pale-gray: #e3e9eb;
 $_gray: #e0e0e0;
-$_bluish-dark-gray: #4E6374;
+$_bluish-dark-gray: #4e6374;
 $_bluish-darker-gray: #3a4956;
 //$_transparent-light-blue-gray: #E0E4E7;
 
 $_blue-gray: #0586ad;
 $_blue: #02b3e8;
 $_sky-blue: #1ecbff;
-$_pale-blue: #9CE8FF;
-$_light-blue: #E5F9FF;
+$_pale-blue: #9ce8ff;
+$_light-blue: #e5f9ff;
 
 $_green: #008000;
 $_light-green: #63b000;
@@ -34,7 +34,7 @@ $_orange: #ff6200;
 $_dark-gold: #df9100;
 $_yellow: #ffff02;
 
-// ------
+//? ===============
 
 $white: $_white;
 $black: $_black;
@@ -44,20 +44,25 @@ $lime: $_lime;
 $light-green: $_light-green;
 
 $primary-color: $_blue;
+$primary-color-dark: #009ddd;
 $primary-color-hover: $_sky-blue;
 $primary-color-pale: $_pale-blue;
 $primary-color-light: $_light-blue;
 
-$surface-color: $_white-pale;
-$surface-color-foggy: $_pale-gray;
-$surface-color-dark-mod: $_bluish-dark-gray;
+$background-color: $_white-pale;
+$background-color-foggy: $_pale-gray;
+$background-color-dark-mod: $_bluish-dark-gray;
 
 $text-color: $_black;
 
-$card-bg-color-dark: $_bluish-dark-gray;
+$surface-color: $white;
+$surface-color-dark: $_bluish-dark-gray;
+
+$highlight-background: $_light-gray;
+$highlight-background-dark: $_bluish-darker-gray;
 
 $tag-bg-color: $_light-gray;
-$tag-bg-color-dark-mode:  $_bluish-darker-gray;
+$tag-bg-color-dark-mode: $_bluish-darker-gray;
 $tag-blue: $_blue-gray;
 $tag-light-blue: $_sky-blue;
 $tag-green: $_green;

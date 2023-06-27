@@ -1,3 +1,4 @@
+@import "../../06.utilities/theme";
 @import "../../00.settings/all-settings";
 
 .btn {
@@ -8,7 +9,7 @@
   text-align: center;
   font-weight: $fw-medium;
   border: $bw-sm solid transparent;
-  
+
   transition: 0.3s;
 
   &--full-width {
@@ -17,38 +18,40 @@
   }
 
   &--primary {
-    background-color: $primary-color;
+    background-color: var(--primary-color);
     color: $white;
 
     &:hover {
-      background-color: $primary-color-hover;
+      background-color: var(--primary-color-hover);
     }
   }
 
   &--secondary {
-    border: $bw-sm solid $primary-color;
-    
+    border: $bw-sm solid var(--primary-color);
+    color: var(--text-color);
+
     &:hover {
-      border-color: rgba($primary-color-hover, 0.5);
+      opacity: 0.8;
+      border-color: var(--primary-color-hover);
       background-color: rgba($primary-color-light, 0.3);
     }
   }
 
   &--tertiary {
-    color: $primary-color;
-    background-color: $surface-color-foggy;
+    color: var(--primary-color);
+    background-color: $background-color-foggy;
 
     &:hover {
-      background-color: $surface-color;
+      background-color: $background-color;
     }
   }
 
-  &--sm{
+  &--sm {
     padding: $space-xs $space-sm;
     font-size: $fs-sm;
   }
-  
-  &--lg{
+
+  &--lg {
     padding: $space-xs $space-base;
     font-size: $fs-md;
   }

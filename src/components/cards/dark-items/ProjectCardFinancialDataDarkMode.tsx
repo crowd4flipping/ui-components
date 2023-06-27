@@ -1,8 +1,8 @@
 import React from "react";
 import { MoneyFormatter } from "../../../utils/MoneyFormatter";
-import { FundedProgressBar } from "./FundedProgressBar";
-import { ProjectInStudyInfo } from "./ProjectInStudyInfo";
+import { FundedProgressBar } from "../items/FundedProgressBar";
 import { ProjectStatus } from "../../types/types";
+import { InStudyDarkMode } from "./InStudyDarkMode";
 
 type ProjectFinancialDataProps = {
   status: ProjectStatus;
@@ -11,19 +11,21 @@ type ProjectFinancialDataProps = {
   profitability: string;
 };
 
-export const ProjectFinancialData = (props: ProjectFinancialDataProps) => {
+export const ProjectCardFinancialDataDarkMode = (
+  props: ProjectFinancialDataProps
+) => {
   const { status, totalProjectAmount, profitability, currentAmount } = props;
 
   const formatedAmount = MoneyFormatter.round(totalProjectAmount);
 
-  if (status === "in_study") return <ProjectInStudyInfo fullWithDivider />;
+  if (status === "in_study") return <InStudyDarkMode withDivider />;
 
   return (
     <div className="project-card-financial-data">
       {status == "funding" && (
         <dl>
           <dt>Objetivo</dt>
-          <dd className={`project-card-financial-data__data`}>
+          <dd className="project-card-financial-data__data">
             {formatedAmount}
           </dd>
         </dl>
@@ -31,9 +33,7 @@ export const ProjectFinancialData = (props: ProjectFinancialDataProps) => {
 
       <dl>
         <dt>Rentabilidad anual</dt>
-        <dd className={`project-card-financial-data__data`}>
-          {profitability}%
-        </dd>
+        <dd className="project-card-financial-data__data">{profitability}%</dd>
       </dl>
 
       <dl>
@@ -44,7 +44,7 @@ export const ProjectFinancialData = (props: ProjectFinancialDataProps) => {
             maxAmount={totalProjectAmount}
           />
         ) : (
-          <dd className={`project-card-financial-data__data`}>
+          <dd className="project-card-financial-data__data">
             {formatedAmount}
           </dd>
         )}

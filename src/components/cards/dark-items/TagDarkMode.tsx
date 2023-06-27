@@ -10,7 +10,7 @@ type TagProps = {
   color: TagColorLightMod;
 };
 
-export const Tag = ({ children, color }: TagProps) => {
+export const TagDarkMode = ({ children, color }: TagProps) => {
   const lightModeColors: Record<TagColorLightMod, string> = {
     blue: "tag--blue",
     green: "tag--green",
@@ -19,7 +19,7 @@ export const Tag = ({ children, color }: TagProps) => {
   };
 
   return (
-    <div className={`tag ${lightModeColors[color]}`}>
+    <div className={`tag ${lightModeColors[color]}-dark-mode}`}>
       <span>{children}</span>
     </div>
   );

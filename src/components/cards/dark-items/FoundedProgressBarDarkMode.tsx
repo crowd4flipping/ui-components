@@ -1,6 +1,6 @@
 import React from "react";
 import { MoneyFormatter } from "../../../utils/MoneyFormatter";
-import { InnerBar } from "./InnerBar";
+import { InnerBarDarkMode } from "./InnerBarDarkMode";
 
 type FundedProgressBarProps = {
   maxAmount: number;
@@ -9,7 +9,7 @@ type FundedProgressBarProps = {
 
 type Amounts = { currentAmount: number; maxAmount: number };
 
-export const FundedProgressBar = (props: FundedProgressBarProps) => {
+export const FoundedProgressBarDarkMode = (props: FundedProgressBarProps) => {
   const { currentAmount, maxAmount } = props;
 
   const roundMoney = getRoundedMoney({ currentAmount, maxAmount });
@@ -25,14 +25,18 @@ export const FundedProgressBar = (props: FundedProgressBarProps) => {
   });
 
   return (
-    <div className="progress-bar">
-      <span className="progress-bar__max-amount">faltan: {roundMoney}</span>
+    <div className={`progress-bar progress-bar--dark-mode`}>
+      <span
+        className={`progress-bar__max-amount progress-bar__max-amount--dark-mode`}
+      >
+        faltan: {roundMoney}
+      </span>
 
       <div
-        className="progress-bar__bar"
+        className={`progress-bar__bar progress-bar__bar--dark-mode`}
         style={{ width: `${percentageFunded}%` }}
       >
-        <InnerBar
+        <InnerBarDarkMode
           percentageFunded={percentageFunded}
           percentageToFund={percentageToFund}
           remainingAmountToFund={remainingAmount}

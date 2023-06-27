@@ -8,12 +8,11 @@ type ProjectCardTopImageProps = {
   region: string;
   street: string;
   status: ProjectStatus;
-  isDark: boolean;
   src: string | ReactElement;
 };
 
 export const ProjectCardTopImage = (props: ProjectCardTopImageProps) => {
-  const { region, street, status, isDark, src } = props;
+  const { region, street, status, src } = props;
 
   return (
     <div className="project-card__top-image-wrapper">
@@ -23,7 +22,7 @@ export const ProjectCardTopImage = (props: ProjectCardTopImageProps) => {
         </ImageWrapperDescription>
       </div>
       <div className="project-card__top-image-tag">
-        <ProjectTag isDark={isDark} status={status} />
+        <ProjectTag status={status} />
       </div>
     </div>
   );

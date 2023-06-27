@@ -4,7 +4,6 @@ import { ProjectFinancialData } from "./ProjectFinancialData";
 import { ProjectStatus } from "../../types/types";
 
 type ProjectCardLeftSideProps = {
-  isDark: boolean;
   status: ProjectStatus;
   businessModel: string;
   currentAmount: number;
@@ -14,7 +13,6 @@ type ProjectCardLeftSideProps = {
 
 export const ProjectCardLeftSide = (props: ProjectCardLeftSideProps) => {
   const {
-    isDark,
     status,
     businessModel,
     currentAmount,
@@ -22,13 +20,11 @@ export const ProjectCardLeftSide = (props: ProjectCardLeftSideProps) => {
     profitability,
   } = props;
 
-  const businessModelColor = isDark && "project-card__business-model--dark";
-
   return (
     <>
       <div className="project-card__header">
-        <ProjectTag isDark={isDark} status={status} />
-        <h4 className={`project-card__business-model ${businessModelColor}`}>
+        <ProjectTag status={status} />
+        <h4 className={`project-card__business-model`}>
           {businessModel}
         </h4>
       </div>
@@ -36,7 +32,6 @@ export const ProjectCardLeftSide = (props: ProjectCardLeftSideProps) => {
         currentAmount={currentAmount}
         profitability={profitability}
         totalProjectAmount={totalProjectAmount}
-        isDark={isDark}
         status={status}
       />
     </>

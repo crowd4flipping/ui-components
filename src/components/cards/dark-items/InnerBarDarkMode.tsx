@@ -7,7 +7,7 @@ type InnerBarProps = {
   remainingAmountToFund: number;
 };
 
-export const InnerBar = (props: InnerBarProps) => {
+export const InnerBarDarkMode = (props: InnerBarProps) => {
   const { percentageFunded, percentageToFund, remainingAmountToFund } = props;
 
   const roundMoney = MoneyFormatter.withUnitySufix(remainingAmountToFund);
@@ -20,11 +20,17 @@ export const InnerBar = (props: InnerBarProps) => {
           width: `${percentageToFund + 102}%`,
         }}
       >
-        <span className="inner-bar__max-amount">faltan: {roundMoney}</span>
+        <span
+          className={`inner-bar__max-amount inner-bar__max-amount--dark-mode`}
+        >
+          faltan: {roundMoney}
+        </span>
       </div>
       {percentageFunded >= 15 && (
         <div className="inner-bar__bar-wrapper">
-          <span className="inner-bar__bar">{percentageFunded}%</span>
+          <span className={`inner-bar__bar inner-bar__bar--dark-mode`}>
+            {percentageFunded}%
+          </span>
         </div>
       )}
     </>

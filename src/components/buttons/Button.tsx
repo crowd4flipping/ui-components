@@ -29,7 +29,7 @@ export const Button = ({
     <button
       onClick={onClick}
       type={type}
-      className={`btn ${buttonStyle(variant)} ${width} ${btnSize(size)} test-theme`}
+      className={`btn ${buttonStyle(variant)} ${width} ${btnSize(size)}`}
     >
       {children}
     </button>

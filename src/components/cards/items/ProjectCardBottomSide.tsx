@@ -14,19 +14,16 @@ export const ProjectCardBottomSide = (props: Props) => {
     status,
     totalProjectAmount,
     businessModel,
-    isDark = false,
+
     projectId,
   } = props;
 
-  const businessModelColor = isDark && "project-card__business-model--dark";
-
   return (
     <>
-      <h4 className={`project-card__business-model ${businessModelColor}`}>
+      <h4 className={`project-card__business-model`}>
         {businessModel}
       </h4>
       <HorizontalFinancialData
-        isDark={isDark}
         status={status}
         currentAmount={currentAmount}
         totalProjectAmount={totalProjectAmount}

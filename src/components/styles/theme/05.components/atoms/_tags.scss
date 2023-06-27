@@ -4,44 +4,55 @@
 .tag {
   @extend .highlighted-text;
   @extend .highlighted-text--xs;
-  
+
   display: inline-block;
   font-weight: $fw-medium;
   font-size: $fs-base;
-  
+
   &--blue {
     color: $tag-blue;
-    
+
     &-dark-mode {
-      @extend .highlighted-text--dark-mode;
       color: $tag-light-blue !important;
     }
   }
-  
+
   &--green {
     color: $tag-green;
-    
+
     &-dark-mode {
-      @extend .highlighted-text--dark-mode;
       color: $tag-lime !important;
     }
   }
-  
+
   &--orange {
     color: $tag-orange;
-    
+
     &-dark-mode {
-      @extend .highlighted-text--dark-mode;
       color: $tag-light-orange !important;
     }
   }
-  
+
   &--yellow {
     color: $tag-dark-yellow;
-    
+
     &-dark-mode {
-      @extend .highlighted-text--dark-mode;
       color: $tag-yellow !important;
     }
+  }
+}
+
+body.dark-theme .tag {
+  &--blue {
+    color: $tag-light-blue;
+  }
+  &--green {
+    color: $tag-lime;
+  }
+  &--orange {
+    color: $tag-light-orange;
+  }
+  &--yellow {
+    color: $tag-yellow;
   }
 }
