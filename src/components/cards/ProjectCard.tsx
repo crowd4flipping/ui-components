@@ -7,7 +7,10 @@ import { ProjectCardTopImage } from "./items/ProjectCardTopImage";
 import { ProjectCardBottomSide } from "./items/ProjectCardBottomSide";
 import "../styles/global.scss";
 
-type ProjectCardLeftSideProps = Parameters<typeof ProjectCardLeftSide>[number];
+type ProjectCardLeftSideProps = Omit<
+  Parameters<typeof ProjectCardLeftSide>[number],
+  "isDark"
+>;
 type ProjectCardRightSideProps = Parameters<
   typeof ProjectCardRightSide
 >[number];
@@ -25,7 +28,7 @@ export const ProjectCard = (props: Props) => {
     return (
       <ProjectCardVerticalLayout
         isDark={isDark}
-        top={<ProjectCardTopImage {...props} />}
+        top={<ProjectCardTopImage {...props} isDark={isDark} />}
         bottom={<ProjectCardBottomSide {...props} />}
       />
     );
@@ -33,7 +36,7 @@ export const ProjectCard = (props: Props) => {
   return (
     <ProjectCardLayout
       isDark={isDark}
-      leftSide={<ProjectCardLeftSide {...props} />}
+      leftSide={<ProjectCardLeftSide {...props} isDark={isDark} />}
       rightSide={<ProjectCardRightSide {...props} />}
     />
   );

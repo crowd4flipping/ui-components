@@ -14,10 +14,10 @@ describe("LinkButton", () => {
     );
 
     const linkButton = await screen.findByText("My Link Button");
-    const linkHref = linkButton.getAttribute("href");
-    const reel = linkButton.getAttribute("rel");
+    const hrefAttribute = linkButton.getAttribute("href");
+    const relAttribute = linkButton.getAttribute("rel");
 
-    expect(linkHref).toMatch(redirectionURL);
-    expect(reel).toMatch("noopener");
+    expect(hrefAttribute).toMatch(redirectionURL);
+    expect(relAttribute).toMatch("noopener");
   });
 });
