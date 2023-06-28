@@ -1,19 +1,19 @@
 import React from "react";
 import { StoryContext } from "@storybook/react";
 
-export const colorTheme = (Story: any, context: StoryContext) => {
-  const { scheme } = context.globals;
-  let bgColor = "white";
+let previousTheme: string;
 
-  if (scheme === "dark") {
+export const colorTheme = (Story: any, context: StoryContext) => {
+  const { scheme, backgrounds } = context.globals;
+  const bgColor = backgrounds.value;
+
+  if (previousTheme !== scheme) {
     document.body.classList.toggle("dark-theme");
-    bgColor = "black";
-  } else {
-    document.body.classList.remove("dark-theme");
+    previousTheme = scheme;
   }
 
   return (
-    <div style={{padding: "5rem", backgroundColor: bgColor}}>
+    <div style={{ backgroundColor: bgColor }}>
       <Story />
     </div>
   );

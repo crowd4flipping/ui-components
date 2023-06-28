@@ -10,13 +10,15 @@ const preview: Preview = {
         date: /Date$/,
       },
     },
-    /* backgrounds: {
+    backgrounds: {
       default: "dark",
       values: [
-        { name: "dark", value: "#00aced" },
-        { name: "light", value: "#3b5998" },
+        { name: "dark", value: "#010f24"},
+        { name: "light", value: "#ffffff" },
+        { name: "surface", value: "#f6f2f2" },
+        { name: "surface-dark", value: "#00284d" },
       ],
-    }, */
+    },
   },
 };
 
@@ -24,7 +26,7 @@ export default preview;
 
 export const globalTypes = {
   scheme: {
-    name: "Sheme",
+    name: "Theme Switcher",
     description: "Light and Dark Theme Selector",
     default: "light",
     toolbar: {

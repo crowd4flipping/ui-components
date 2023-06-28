@@ -49,14 +49,17 @@ $primary-color-hover: $_sky-blue;
 $primary-color-pale: $_pale-blue;
 $primary-color-light: $_light-blue;
 
-$background-color: $_white-pale;
-$background-color-foggy: $_pale-gray;
-$background-color-dark-mod: $_bluish-dark-gray;
-
 $text-color: $_black;
 
-$surface-color: $white;
+$background-color: $white;
+$background-color-dark-mod: $_dark-purple;
+
+$surface-color: $_white-pale;
+$surface-color-foggy: $_pale-gray;
 $surface-color-dark: $_bluish-dark-gray;
+
+$card-color: $white;
+$card-color-dark: $_bluish-dark-gray;
 
 $highlight-background: $_light-gray;
 $highlight-background-dark: $_bluish-darker-gray;
@@ -71,3 +74,4 @@ $tag-orange: $_orange;
 $tag-light-orange: $_light-orange;
 $tag-dark-yellow: $_dark-gold;
 $tag-yellow: $_yellow;
+

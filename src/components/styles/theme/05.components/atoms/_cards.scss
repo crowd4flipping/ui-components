@@ -7,7 +7,7 @@
 .card {
   padding: $space-sm;
   border-radius: $br-base;
-  background-color: var(--surface-color);
+  background-color: var(--card-color);
   display: inline-block;
   border: $bw-sm solid rgba($white, 0.2);
   color: var(--text-color);
