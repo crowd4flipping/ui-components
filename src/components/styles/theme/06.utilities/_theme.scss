@@ -4,14 +4,13 @@
   --primary-color: #{$primary-color};
   --primary-color-hover: #{$primary-color-hover};
 
-  //? Secondary color (light and dark)
+  --text-color: #{$text-color};
 
   --background-color: #{$background-color};
+
   --surface-color: #{$surface-color};
 
   --card-color:  #{$card-color};
-  
-  --text-color: #{$text-color};
   
   --highlight-background: #{$highlight-background};
 }
@@ -20,12 +19,13 @@
   --primary-color: #{$primary-color-dark};
   --primary-color-hover: #{$primary-color};
   
+  --text-color: #{$white};
+
   --background-color: #{$background-color-dark-mod};
+
   --surface-color: #{$surface-color-dark};
   
   --card-color:  #{$card-color-dark};
-
-  --text-color: #{$white};
 
   --highlight-background: #{$highlight-background-dark};
 }

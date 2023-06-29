@@ -11,28 +11,28 @@ const preview: Preview = {
       },
     },
     backgrounds: {
-      default: "dark",
+      default: "background-dark",
       values: [
-        { name: "dark", value: "#010f24"},
-        { name: "light", value: "#ffffff" },
+        { name: "background", value: "#ffffff" },
         { name: "surface", value: "#f6f2f2" },
+        { name: "background-dark", value: "#010f24"},
         { name: "surface-dark", value: "#00284d" },
       ],
     },
   },
 };
 
-export default preview;
 
 export const globalTypes = {
   scheme: {
     name: "Theme Switcher",
     description: "Light and Dark Theme Selector",
-    default: "light",
+    default: "dark",
     toolbar: {
       icon: "mirror",
-      items: ["light", "dark"],
-      dynamicTitle: true,
+      items: ["dark", "light"],
     },
   },
 };
+
+export default preview;
