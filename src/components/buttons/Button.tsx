@@ -1,8 +1,9 @@
 import React, { ReactComponentElement } from "react";
 import "../styles/global.scss";
-import { element } from "prop-types";
+import { unhandledTyles } from "../../utils/utils";
 
-type ButtonVariant = "primary" | "secondary" | "tertiary";
+type ButtonVariant = "primary" | "secondary";
+
 type ReactButtonProps = Pick<
   ReactComponentElement<"button">["props"],
   "children" | "type" | "onClick"
@@ -35,14 +36,27 @@ export const Button = ({
     </button>
   );
 
-  function buttonStyle(variant: ButtonVariant) {
-    if (variant == "primary") return "btn--primary";
-    if (variant == "secondary") return "btn--secondary";
-    if (variant == "tertiary") return "btn--tertiary";
+  function buttonStyle(btnVariant: ButtonVariant) {
+    switch (btnVariant) {
+      case "primary":
+        return "btn--primary";
+      case "secondary":
+        return "btn--secondary";
+      default:
+        return unhandledTyles(btnVariant);
+    }
   }
 
   function btnSize(buttonSize: ButtonSize) {
-    if (buttonSize === "sm") return "btn--sm";
-    if (buttonSize === "lg") return "btn--lg";
+    switch (buttonSize) {
+      case "sm":
+        return "btn--sm";
+      case "md":
+        return;
+      case "lg":
+        return "btn--lg";
+      default:
+        return unhandledTyles(buttonSize);
+    }
   }
 };

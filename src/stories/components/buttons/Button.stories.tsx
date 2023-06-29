@@ -30,12 +30,3 @@ export const SecondaryButton: Story = {
     variant: "secondary",
   },
 };
-
-export const TertiaryButton: Story = {
-  name: "Tertiary button",
-  args: {
-    size: "md",
-    children: "Tertiary Button",
-    variant: "tertiary",
-  },
-};
