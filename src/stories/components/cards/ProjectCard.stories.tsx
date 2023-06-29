@@ -24,7 +24,7 @@ export const MyProjectCard: Story = {
     street: "C/ Santiago el hermoso",
     isVertical: false,
     projectId: "https://crowd4flipping.com/",
-    businessModel: "Renting",
+    businessModel: "House Flipping",
     status: "active",
     src: imageUrl(),
     currentAmount: 50000,
