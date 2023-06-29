@@ -18,7 +18,7 @@ export const ProjectCardTopImage = (props: ProjectCardTopImageProps) => {
     <div className="project-card__top-image-wrapper">
       <div className="project-card__image">
         <ImageWrapperDescription title={region} subtitle={street}>
-          <ProjectCardImage forVerticalLayout src={src} />
+          <ProjectCardImage {...props} />
         </ImageWrapperDescription>
       </div>
       <div className="project-card__top-image-tag">

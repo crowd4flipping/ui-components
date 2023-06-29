@@ -10,9 +10,9 @@ export const ProjectCardLayout = ({
   rightSide,
 }: ProjectLayoutProps) => {
   return (
-    <div className="card card--md">
+    <div className="project-card">
       <div className="project-card__content">
-        <div className="project-card__content-left">{leftSide}</div>
+        <div className="project-card__image-wrapper">{leftSide}</div>
         <div className="project-card__content-right">{rightSide}</div>
       </div>
     </div>

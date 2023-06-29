@@ -1,7 +1,7 @@
 import React from "react";
 import "../styles/global.scss";
 
-const tagColors = ["green", "blue", "yellow", "orange"] as const;
+const tagColors = ["green", "blue", "magenta", "orange"] as const;
 
 type TagColorLightMod = (typeof tagColors)[number];
 
@@ -15,7 +15,7 @@ export const Tag = ({ children, color }: TagProps) => {
     blue: "tag--blue",
     green: "tag--green",
     orange: "tag--orange",
-    yellow: "tag--yellow",
+    magenta: "tag--magenta",
   };
 
   return (

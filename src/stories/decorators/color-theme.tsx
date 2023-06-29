@@ -11,5 +11,16 @@ export const colorTheme = (Story: any, context: StoryContext) => {
     previousTheme = scheme;
   }
 
-  return <Story />;
+  return (
+    <div
+      style={{
+        height: "350px",
+        width: "500px",
+        backgroundColor: "#183155",
+        padding: "1rem"
+      }}
+    >
+      <Story />
+    </div>
+  );
 };

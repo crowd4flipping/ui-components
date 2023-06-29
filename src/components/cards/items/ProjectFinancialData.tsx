@@ -16,24 +16,25 @@ export const ProjectFinancialData = (props: ProjectFinancialDataProps) => {
 
   const formatedAmount = MoneyFormatter.round(totalProjectAmount);
 
-  if (status === "in_study") return <ProjectInStudyInfo fullWithDivider />;
+  if (status === "in_study")
+    return (
+      <div className="project-card__financial-data">
+        <ProjectInStudyInfo fullWithDivider />
+      </div>
+    );
 
   return (
-    <div className="project-card-financial-data">
+    <div className="project-card__financial-data">
       {status == "funding" && (
         <dl>
           <dt>Objetivo</dt>
-          <dd className={`project-card-financial-data__data`}>
-            {formatedAmount}
-          </dd>
+          <dd className={`project-card__highlight`}>{formatedAmount}</dd>
         </dl>
       )}
 
       <dl>
         <dt>Rentabilidad anual</dt>
-        <dd className={`project-card-financial-data__data`}>
-          {profitability}%
-        </dd>
+        <dd className={`project-card__highlight`}>{profitability}%</dd>
       </dl>
 
       <dl>
@@ -44,22 +45,9 @@ export const ProjectFinancialData = (props: ProjectFinancialDataProps) => {
             maxAmount={totalProjectAmount}
           />
         ) : (
-          <dd className={`project-card-financial-data__data`}>
-            {formatedAmount}
-          </dd>
+          <dd className={`project-card__highlight`}>{formatedAmount}</dd>
         )}
       </dl>
-
-      {status == "active" && (
-        <span className="project-card-financial-data__info">
-          Este proyecto ya está en ejecución
-        </span>
-      )}
-      {status == "finished" && (
-        <span className="project-card-financial-data__info">
-          Este proyecto ya ha sido explotado
-        </span>
-      )}
     </div>
   );
 };

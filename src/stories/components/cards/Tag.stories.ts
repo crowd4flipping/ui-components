@@ -38,9 +38,9 @@ export const TagOrange: Story = {
 };
 
 export const TagYellow: Story = {
-  name: "Tag Yellow",
+  name: "Tag Magenta",
   args: {
-    color: "yellow",
+    color: "magenta",
     children: "Yellow tag",
   },
 };

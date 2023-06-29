@@ -2,41 +2,29 @@
 @import "./highlighted-text";
 
 .tag {
-  @extend .highlighted-text;
-  @extend .highlighted-text--xs;
-
   display: inline-block;
-  font-weight: $fw-medium;
   font-size: $fs-base;
+  padding: $space-2xs $space-xs;
+
+  border-radius: $br-sm;
 
   &--blue {
-    color: $tag-blue;
+    color: #02B3E8;
+    background-color: rgba(#02B3E8, .2);
   }
-
+  
   &--green {
-    color: $tag-green;
+    color: #40C52B;
+    background-color: rgba(#40C52B, .2);
   }
-
+  
   &--orange {
-    color: $tag-orange;
+    color: #FF4D01;
+    background-color: rgba(#FF4D01, .2);
   }
-
-  &--yellow {
-    color: $tag-dark-yellow;
-  }
-}
-
-body.dark-theme .tag {
-  &--blue {
-    color: $tag-light-blue;
-  }
-  &--green {
-    color: $tag-lime;
-  }
-  &--orange {
-    color: $tag-light-orange;
-  }
-  &--yellow {
-    color: $tag-yellow;
+  
+  &--magenta {
+    color: #F159F4;
+    background-color: rgba(#F159F4, .2);
   }
 }

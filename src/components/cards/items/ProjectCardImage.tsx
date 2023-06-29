@@ -1,29 +1,33 @@
 import React, { ReactElement } from "react";
 import { C4FComponentError } from "../../../errors/C4FComponentError";
+import { ImageWrapperDescription } from "../../images/ImageWrapperDescription";
 
 type ProjectCardImageProps = {
   src: string | ReactElement;
-  forVerticalLayout: boolean;
+  region: string;
+  street: string;
 };
 
 export const ProjectCardImage = ({
   src,
-  forVerticalLayout,
+  region,
+  street,
 }: ProjectCardImageProps) => {
-  const imageHeight = forVerticalLayout ? 208 : 227;
-
   return (
     <>
       {isReactImageElement(src) ? (
-        src
+        <ImageWrapperDescription title={region} subtitle={street}>
+          {src}
+        </ImageWrapperDescription>
       ) : (
-        <img
-          width={272}
-          height={imageHeight}
-          loading="lazy"
-          alt="imagen del proyecto"
-          src={src}
-        />
+        <ImageWrapperDescription title={region} subtitle={street}>
+          <img
+            loading="lazy"
+            alt="imagen del proyecto"
+            src={src}
+            className="project-card__image"
+          />
+        </ImageWrapperDescription>
       )}
     </>
   );

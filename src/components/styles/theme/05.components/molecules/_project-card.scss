@@ -8,10 +8,24 @@ $_project-card-vertical-width: 17rem;
 $_project-card-height: 17rem;
 
 .project-card {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+
+  background-color: var(--card-color);
+  color: var(--text-color);
+
+  border-radius: $br-md;
+  border: $bw-xs solid rgba($white, 0.1);
+
+  @include shadow-base(rgba(0, 0, 0, 0.622));
+
   &__content {
-    @extend %flex-base;
-    width: $_project-card-width;
-    height: $_project-card-height;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    height: 100%;
 
     &--vertical {
       @extend %flex-col-xs;
@@ -19,18 +33,23 @@ $_project-card-height: 17rem;
     }
   }
 
-  &__content-left {
-    @extend %flex-col-base;
-    width: 40%;
-    height: $full;
-    justify-content: space-between;
-  }
-
   &__content-right {
+    grid-column: 5 / 8;
+    padding: $space-sm;
     @extend %flex-col;
     width: $full;
     flex: 1;
     justify-content: space-between;
+  }
+
+  &__image-wrapper{
+    grid-column: 1 / 5; 
+  }
+
+  &__image {
+    height: $full;
+    width: 100%;
+    object-fit: cover;
   }
 
   &__content-bottom {
@@ -48,58 +67,33 @@ $_project-card-height: 17rem;
     margin: $space-sm;
   }
 
-  &__image {
-    @extend .img--md;
-  }
-
   &__header {
-    @extend %flex-col-base;
+    @extend %flex-col-xs;
   }
 
-  &__business-model {
-    @extend .highlighted-text;
+  &__financial-data {
+    @extend %flex-col-center;
+    gap: $space-xs;
+  }
+
+  &__highlight {
+    font-size: $fs-md;
+    font-weight: $fw-bold;
+    color: var(--highlight-color);
+  }
+
+  &__extra-info {
+    font-style: italic;
+    color: var(--subtitle-color);
+    font-size: $fs-sm;
+    margin-bottom: $space-xs;
   }
 }
 
 .project-card-financial-data {
-  @extend %flex-col-base;
-  flex: 1;
-  font-size: $fs-base;
-
-  &__data {
-    font-size: $fs-md;
-    font-weight: $fw-bold;
-    color: $light-green;
-  }
-
-  &__info {
-    font-style: italic;
-    color: var(--text-color);
-  }
-
-  &__divider {
-    width: $full;
-    border: 0.5px solid $surface-color-foggy;
-  }
-
-  &__in-study-content {
-    @extend %flex-col-xs;
-    text-align: start;
-  }
-
   &--horizontal {
     @extend %flex-space-between;
     text-align: center;
-  }
-}
-
-body.dark-theme .project-card-financial-data {
-  &__data {
-    color: $lime;
-  }
-
-  &__divider {
-    border: 0.5px solid rgba($white, 0.2);
   }
 }
 
@@ -164,9 +158,8 @@ body.dark-theme .progress-bar {
   &__max-amount {
     margin-top: 0.07rem;
     @extend .progress-bar__max-amount;
-   
 
-   /*  &--dark-mode {
+    /*  &--dark-mode {
       color: $tag-bg-color-dark-mode;
     } */
   }
