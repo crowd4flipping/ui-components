@@ -37,15 +37,6 @@
     }
   }
 
-  &--tertiary {
-    color: var(--primary-color);
-    background-color: $surface-color-foggy;
-
-    &:hover {
-      background-color: $background-color;
-    }
-  }
-
   &--sm {
     padding: $space-xs $space-sm;
     font-size: $fs-sm;
