@@ -4,7 +4,7 @@
 .highlighted-text {
   @extend %padding-sm;
 
-  background-color: var(--highlight-background);
+  background-color: var(--surface-color);
   border-radius: $br-sm;
 
   &--xs {

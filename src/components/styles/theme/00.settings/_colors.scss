@@ -43,26 +43,12 @@ $dark-purple: $_dark-purple;
 $lime: $_lime;
 $light-green: $_light-green;
 
-$primary-color: $_blue;
-$primary-color-dark: #009ddd;
-$primary-color-hover: $_sky-blue;
 $primary-color-pale: $_pale-blue;
 $primary-color-light: $_light-blue;
-
-$text-color: $_black;
-
-$background-color: $white;
-$background-color-dark-mod: $_dark-purple;
 
 $surface-color: $_white-pale;
 $surface-color-foggy: $_pale-gray;
 $surface-color-dark: $_bluish-dark-gray;
-
-$card-color: $white;
-$card-color-dark: #294367; //$_bluish-dark-gray;
-
-$highlight-background: $_light-gray;
-$highlight-background-dark: $_bluish-darker-gray;
 
 $tag-bg-color: $_light-gray;
 $tag-bg-color-dark-mode: $_bluish-darker-gray;
@@ -75,3 +61,37 @@ $tag-light-orange: $_light-orange;
 $tag-dark-yellow: $_dark-gold;
 $tag-yellow: $_yellow;
 
+
+
+//* = = = = =  = THEMING
+
+//? Light theme
+$primary-color: #02b3e8;
+$primary-color-hover: #1ecbff;
+
+$text-color: #2d3038;
+$subtitle-color: #677b86;
+
+$background-color: #FFFFFF;
+
+$surface-color: #E2E9ED;
+
+$card-color: #FFFFFF;
+
+$highlight-color: #40C52B;
+
+//? Dak theme
+$primary-color-dark: #009ddd;
+$primary-color-dark-hover: $primary-color;
+
+$text-color-dark: white;
+$subtitle-color-dark: #b6cef1;
+
+$background-color-dark: #010F24;
+
+$surface-color-dark: #122745;
+
+$card-color-dark: #294367;
+
+
+$highlight-color-dark: #8BF502;
