@@ -1,7 +1,6 @@
 import React from "react";
 import { LinkButton } from "../../src/components/buttons/LinkButton";
 import { render, screen } from "@testing-library/react";
-import { fireEvent } from "@storybook/testing-library";
 
 describe("LinkButton", () => {
   it("Containst a href and rel 'noopener'", async () => {
@@ -13,7 +12,7 @@ describe("LinkButton", () => {
       </LinkButton>
     );
 
-    const linkButton = await screen.findByText("My Link Button");
+    const linkButton = await screen.findByRole("link");
     const hrefAttribute = linkButton.getAttribute("href");
     const relAttribute = linkButton.getAttribute("rel");
 

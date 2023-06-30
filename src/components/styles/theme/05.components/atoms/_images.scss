@@ -2,28 +2,11 @@
 @import "../../01.tools/all-tools";
 @import "../../00.settings/all-settings";
 
-.img {
-  &--sm {
-    border-radius: $br-sm;
-    overflow: hidden;
-  }
-
-  &--md {
-    border-radius: $br-base;
-    overflow: hidden;
-  }
-
-  &--lg {
-    border-radius: $br-md;
-    overflow: hidden;
-  }
-}
-
 .img-wrapper-title {
   position: relative;
-  width: 100%;
+  width: fit-content;
   height: 100%;
-
+  
   &__content {
     @extend %position-t-0;
     

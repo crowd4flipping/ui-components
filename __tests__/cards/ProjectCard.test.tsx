@@ -15,7 +15,7 @@ describe("ProjectCard", () => {
         street="C/ Bartolome del poble"
         totalProjectAmount={900000}
         src={""}
-        status="active"
+        status="in_progress"
       />
     );
 

@@ -163,15 +163,11 @@ body.dark-theme .progress-bar {
   &__max-amount {
     margin-top: 0.07rem;
     @extend .progress-bar__max-amount;
-
-    /*  &--dark-mode {
-      color: $tag-bg-color-dark-mode;
-    } */
   }
 }
 
 body.dark-theme .inner-bar {
   &__bar {
-    color: $tag-bg-color-dark-mode;
+    color: $surface-color-dark;
   }
 }
