@@ -5,6 +5,7 @@ import { ProjectCardVerticalLayout } from "./items/ProjectCardVerticalLayout";
 import { ProjectCardBottomSide } from "./items/ProjectCardBottomSide";
 import "../styles/global.scss";
 import { ProjectCardImage } from "./items/ProjectCardImage";
+import { ImageWrapperDescription } from "../images";
 
 type ProjectCardRightSideProps = Parameters<
   typeof ProjectCardRightSide
@@ -13,6 +14,8 @@ type ProjectCardImageProps = Parameters<typeof ProjectCardImage>[number];
 
 type Props = {
   isVertical?: boolean;
+  region: string;
+  street: string;
 } & ProjectCardRightSideProps &
   ProjectCardImageProps;
 
@@ -22,14 +25,20 @@ export const ProjectCard = (props: Props) => {
   if (isVertical)
     return (
       <ProjectCardVerticalLayout
-        top={<ProjectCardImage {...props} />}
+        top={<ProjectCardImage src={props.src} />}
         bottom={<ProjectCardBottomSide {...props} />}
+        region={props.region}
+        street={props.street}
       />
     );
 
   return (
     <ProjectCardLayout
-      leftSide={<ProjectCardImage {...props} />}
+      leftSide={
+        <ImageWrapperDescription title={props.region} subtitle={props.street}>
+          <ProjectCardImage src={props.src} />
+        </ImageWrapperDescription>
+      }
       rightSide={<ProjectCardRightSide {...props} />}
     />
   );

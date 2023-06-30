@@ -1,33 +1,24 @@
 import React, { ReactElement } from "react";
 import { C4FComponentError } from "../../../errors/C4FComponentError";
-import { ImageWrapperDescription } from "../../images/ImageWrapperDescription";
 
 type ProjectCardImageProps = {
   src: string | ReactElement;
-  region: string;
-  street: string;
 };
 
 export const ProjectCardImage = ({
-  src,
-  region,
-  street,
+  src
 }: ProjectCardImageProps) => {
   return (
     <>
       {isReactImageElement(src) ? (
-        <ImageWrapperDescription title={region} subtitle={street}>
-          {src}
-        </ImageWrapperDescription>
+        { src }
       ) : (
-        <ImageWrapperDescription title={region} subtitle={street}>
-          <img
-            loading="lazy"
-            alt="imagen del proyecto"
-            src={src}
-            className="project-card__image"
-          />
-        </ImageWrapperDescription>
+        <img
+          loading="lazy"
+          alt="imagen del proyecto"
+          src={src}
+          className="project-card__image"
+        />
       )}
     </>
   );
