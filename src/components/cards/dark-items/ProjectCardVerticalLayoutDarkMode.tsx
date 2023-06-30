@@ -9,13 +9,10 @@ export const ProjectCardVerticalLayoutDarkMode = ({
   top,
   bottom,
 }: ProjectCardVerticalLayoutProps) => {
-
   return (
-    <div className={`card card--md project-card--dark-mode`}>
-      <div className="project-card__content--vertical">
-        <div>{top}</div>
-        <div className="project-card__content-bottom">{bottom}</div>
-      </div>
+    <div>
+      <>{top}</>
+      <div className="project-card__content-bottom">{bottom}</div>
     </div>
   );
 };

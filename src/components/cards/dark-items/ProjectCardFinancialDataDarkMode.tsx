@@ -1,4 +1,4 @@
-import React from "react";
+import React, { ReactElement } from "react";
 import { MoneyFormatter } from "../../../utils/MoneyFormatter";
 import { FundedProgressBar } from "../items/FundedProgressBar";
 import { ProjectStatus } from "../../types/types";
@@ -50,7 +50,7 @@ export const ProjectCardFinancialDataDarkMode = (
         )}
       </dl>
 
-      {status == "active" && (
+      {status == "in_progress" && (
         <span className="project-card-financial-data__info">
           Este proyecto ya está en ejecución
         </span>

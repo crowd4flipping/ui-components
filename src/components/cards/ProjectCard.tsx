@@ -2,7 +2,6 @@ import React from "react";
 import { ProjectCardLayout } from "./items/ProjectCardLayout";
 import { ProjectCardRightSide } from "./items/ProjectCardRightSide";
 import { ProjectCardVerticalLayout } from "./items/ProjectCardVerticalLayout";
-import { ProjectCardTopImage } from "./items/ProjectCardTopImage";
 import { ProjectCardBottomSide } from "./items/ProjectCardBottomSide";
 import "../styles/global.scss";
 import { ProjectCardImage } from "./items/ProjectCardImage";
@@ -23,7 +22,7 @@ export const ProjectCard = (props: Props) => {
   if (isVertical)
     return (
       <ProjectCardVerticalLayout
-        top={<ProjectCardTopImage {...props} />}
+        top={<ProjectCardImage {...props} />}
         bottom={<ProjectCardBottomSide {...props} />}
       />
     );

@@ -25,7 +25,7 @@ export const MyProjectCard: Story = {
     isVertical: false,
     projectId: "https://crowd4flipping.com/",
     businessModel: "House Flipping",
-    status: "active",
+    status: "in_progress",
     src: imageUrl(),
     currentAmount: 50000,
     totalProjectAmount: 150000,

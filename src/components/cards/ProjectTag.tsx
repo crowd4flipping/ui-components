@@ -11,7 +11,7 @@ export const ProjectTag = ({ status }: ProjectTagProps) => {
   const projectTag: Record<ProjectStatus, ReactElement> = {
     in_study: <Tag color="blue">En estudio</Tag>,
     funding: <Tag color="green">En financiación</Tag>,
-    active: <Tag color="magenta">En ejecución</Tag>,
+    in_progress: <Tag color="magenta">En ejecución</Tag>,
     finished: <Tag color="orange">Finalizado</Tag>,
   };
 

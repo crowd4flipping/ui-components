@@ -19,28 +19,22 @@ export const HorizontalFinancialData = (props: Props) => {
     return <ProjectInStudyInfo fullWithDivider={false} />;
 
   return (
-    <div className="project-card-financial-data">
-      <div className="project-card-financial-data--horizontal">
-        <dl>
+    <div className="project-card__financial-data">
+      <div className="project-card__financial-data--horizontal">
+        <dl className="project-card__left-data">
           <dt>Rent. anual</dt>
-          <dd className="project-card-financial-data__data">
-            {profitability}%
-          </dd>
+          <dd className="project-card__highlight">{profitability}%</dd>
         </dl>
-        <dl>
+        <dl className="project-card__right-data">
           {status == "funding" ? (
             <>
               <dt>Objetivo</dt>
-              <dd className="project-card-financial-data__data">
-                {formatedAmount}
-              </dd>
+              <dd className="project-card__highlight">{formatedAmount}</dd>
             </>
           ) : (
             <>
               <dt>Recaudado</dt>
-              <dd className="project-card-financial-data__data">
-                {formatedAmount}
-              </dd>
+              <dd className="project-card__highlight">{formatedAmount}</dd>
             </>
           )}
         </dl>
@@ -54,17 +48,6 @@ export const HorizontalFinancialData = (props: Props) => {
             maxAmount={totalProjectAmount}
           />
         </dl>
-      )}
-
-      {status == "active" && (
-        <span className="project-card-financial-data__info">
-          Este proyecto ya está en ejecución
-        </span>
-      )}
-      {status == "finished" && (
-        <span className="project-card-financial-data__info">
-          Este proyecto ya ha sido explotado
-        </span>
       )}
     </div>
   );

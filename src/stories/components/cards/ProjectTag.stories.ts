@@ -28,9 +28,9 @@ export const TagFundingProject: Story = {
 };
 
 export const TagActiveProject: Story = {
-  name: "Active",
+  name: "In Progress",
   args: {
-    status: "active",
+    status: "in_progress",
   },
 };
 

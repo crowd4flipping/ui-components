@@ -37,7 +37,7 @@ export const ProjectCardRightSide = (props: Props) => {
       />
       <div>
         <p className="project-card__extra-info">
-          {status == "active" && "Este proyecto ya está en ejecución"}
+          {status == "in_progress" && "Este proyecto ya está en ejecución"}
           {status == "finished" && "Este proyecto ya ha sido explotado"}
         </p>
 

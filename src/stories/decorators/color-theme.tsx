@@ -14,9 +14,9 @@ export const colorTheme = (Story: any, context: StoryContext) => {
   return (
     <div
       style={{
-        width: "500px",
-        height: "350px",
-       // backgroundColor: "#183155",
+       // width: "500px",
+        height: "100vh",
+       //backgroundColor: "#183155",
        // padding: "1rem"
       }}
     >

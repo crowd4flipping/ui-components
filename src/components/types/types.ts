@@ -1,1 +1,1 @@
-export type ProjectStatus = "in_study" | "funding" | "active" | "finished";
+export type ProjectStatus = "in_study" | "funding" | "in_progress" | "finished";

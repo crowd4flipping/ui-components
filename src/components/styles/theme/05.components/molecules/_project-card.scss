@@ -11,8 +11,11 @@ $_project-card-height: 17rem;
   display: inline-block;
   position: relative;
   overflow: hidden;
-  width: 100%;
-  height: 100%;
+
+  max-width: 40rem;
+  min-height: 20rem;
+
+  aspect-ratio: 1.4;
 
   background-color: var(--card-color);
   color: var(--text-color);
@@ -22,15 +25,19 @@ $_project-card-height: 17rem;
 
   @include shadow-base(rgba(0, 0, 0, 0.622));
 
+  &--vertical-layout {
+    width: 100%;
+    max-width: 25rem;
+    min-width: 18rem;
+    aspect-ratio: .7;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
   &__content {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
     height: 100%;
-
-    &--vertical {
-      @extend %flex-col-xs;
-      width: $_project-card-vertical-width;
-    }
   }
 
   &__content-right {
@@ -42,8 +49,8 @@ $_project-card-height: 17rem;
     justify-content: space-between;
   }
 
-  &__image-wrapper{
-    grid-column: 1 / 5; 
+  &__image-wrapper {
+    grid-column: 1 / 5;
   }
 
   &__image {
@@ -53,27 +60,34 @@ $_project-card-height: 17rem;
   }
 
   &__content-bottom {
-    @extend %flex-col-base;
-    justify-content: space-between;
-    height: $full;
-  }
-
-  &__top-image-wrapper {
-    position: relative;
-  }
-
-  &__top-image-tag {
-    @extend %position-b-0;
-    margin: $space-sm;
+    @extend %flex-col-space-between;
+    padding: $space-sm;
+    gap: $space-base;
   }
 
   &__header {
     @extend %flex-col-xs;
+
+    &--horizontal{
+      @extend %flex-space-between;
+    }
   }
 
   &__financial-data {
     @extend %flex-col-center;
-    gap: $space-xs;
+    gap: $space-sm;
+
+    &--horizontal {
+      @extend %flex-space-between;
+    }
+  }
+
+  &__left-data {
+    text-align: left;
+  }
+
+  &__right-data {
+    text-align: right;
   }
 
   &__highlight {
@@ -87,13 +101,6 @@ $_project-card-height: 17rem;
     color: var(--subtitle-color);
     font-size: $fs-sm;
     margin-bottom: $space-xs;
-  }
-}
-
-.project-card-financial-data {
-  &--horizontal {
-    @extend %flex-space-between;
-    text-align: center;
   }
 }
 

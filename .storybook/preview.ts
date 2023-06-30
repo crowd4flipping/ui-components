@@ -1,5 +1,6 @@
 import type { Preview } from "@storybook/react";
 import "../src/components/styles/global.scss";
+import { INITIAL_VIEWPORTS } from "@storybook/addon-viewport";
 
 const preview: Preview = {
   parameters: {
@@ -15,13 +16,15 @@ const preview: Preview = {
       values: [
         { name: "background", value: "#ffffff" },
         { name: "surface", value: "#f6f2f2" },
-        { name: "background-dark", value: "#010f24"},
+        { name: "background-dark", value: "#010f24" },
         { name: "surface-dark", value: "#00284d" },
       ],
     },
+    viewport: {
+      viewports: INITIAL_VIEWPORTS
+    }
   },
 };
-
 
 export const globalTypes = {
   scheme: {

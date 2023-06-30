@@ -28,13 +28,13 @@ export const ProjectFinancialData = (props: ProjectFinancialDataProps) => {
       {status == "funding" && (
         <dl>
           <dt>Objetivo</dt>
-          <dd className={`project-card__highlight`}>{formatedAmount}</dd>
+          <dd className="project-card__highlight">{formatedAmount}</dd>
         </dl>
       )}
 
       <dl>
         <dt>Rentabilidad anual</dt>
-        <dd className={`project-card__highlight`}>{profitability}%</dd>
+        <dd className="project-card__highlight">{profitability}%</dd>
       </dl>
 
       <dl>
@@ -45,7 +45,7 @@ export const ProjectFinancialData = (props: ProjectFinancialDataProps) => {
             maxAmount={totalProjectAmount}
           />
         ) : (
-          <dd className={`project-card__highlight`}>{formatedAmount}</dd>
+          <dd className="project-card__highlight">{formatedAmount}</dd>
         )}
       </dl>
     </div>
