@@ -18,8 +18,8 @@ export const ProjectCardVerticalLayout = ({
       {bottom}
       {top}
       <div className="img-wrapper-title__content">
-        <figcaption className="img-wrapper-title__title">{region}</figcaption>
-        <figcaption className="img-wrapper-title__subtitle">{street}</figcaption>
+        <p className="img-wrapper-title__title">{region}</p>
+        <p className="img-wrapper-title__subtitle">{street}</p>
       </div>
     </div>
   );
