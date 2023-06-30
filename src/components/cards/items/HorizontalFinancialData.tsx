@@ -15,8 +15,7 @@ export const HorizontalFinancialData = (props: Props) => {
   const { status, totalProjectAmount, profitability, currentAmount } = props;
   const formatedAmount = MoneyFormatter.round(totalProjectAmount);
 
-  if (status == "in_study")
-    return <ProjectInStudyInfo fullWithDivider={false} />;
+  if (status == "in_study") return <ProjectInStudyInfo />;
 
   return (
     <div className="project-card__financial-data">

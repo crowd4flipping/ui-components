@@ -5,9 +5,7 @@ type ProjectCardImageProps = {
   src: string | ReactElement;
 };
 
-export const ProjectCardImage = ({
-  src
-}: ProjectCardImageProps) => {
+export const ProjectCardImage = ({ src }: ProjectCardImageProps) => {
   return (
     <>
       {isReactImageElement(src) ? (

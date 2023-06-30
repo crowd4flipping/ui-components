@@ -19,7 +19,7 @@ export const ProjectFinancialData = (props: ProjectFinancialDataProps) => {
   if (status === "in_study")
     return (
       <div className="project-card__financial-data">
-        <ProjectInStudyInfo fullWithDivider />
+        <ProjectInStudyInfo />
       </div>
     );
 

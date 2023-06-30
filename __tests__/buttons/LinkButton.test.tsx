@@ -17,6 +17,6 @@ describe("LinkButton", () => {
     const relAttribute = linkButton.getAttribute("rel");
 
     expect(hrefAttribute).toMatch(redirectionURL);
-    expect(relAttribute).toMatch("noopener");
+    expect(relAttribute).toMatch("noreferrer");
   });
 });

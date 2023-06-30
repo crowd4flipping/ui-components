@@ -21,7 +21,7 @@ export const LinkButton = ({
   const width = fullWidth && "btn--full-width";
 
   return (
-    <a rel="noopener" target={newTab ? "_blank" : "_self"} href={href}>
+    <a rel="noreferrer" target={newTab ? "_blank" : "_self"} href={href}>
       <div
         className={`btn ${buttonStyle(variant)} ${width} ${btnSize(
           size

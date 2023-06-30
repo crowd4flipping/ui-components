@@ -21,7 +21,7 @@ describe("ProjectCard", () => {
 
     const projectLinkButton = await screen.findByRole("link");
     const hrefAttribute = projectLinkButton.getAttribute("href");
-    
+
     expect(hrefAttribute).toMatch(`/proyectos/${projectId}`);
   });
 });

@@ -1,10 +1,6 @@
 import React from "react";
 
-export const ProjectInStudyInfo = ({
-  fullWithDivider,
-}: {
-  fullWithDivider: boolean;
-}) => {
+export const ProjectInStudyInfo = () => {
   return (
     <div>
       <p className={`fs--base fc--subtitle`}>

@@ -18,6 +18,6 @@ export const MyLinkButton: Story = {
   args: {
     children: "Primary Button",
     variant: "primary",
-    href: "https://www.google.com/"
+    href: "https://www.google.com/",
   },
 };

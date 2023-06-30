@@ -1,4 +1,4 @@
-import React, { ReactElement } from "react";
+import React from "react";
 import { MoneyFormatter } from "../../../utils/MoneyFormatter";
 import { FundedProgressBar } from "../items/FundedProgressBar";
 import { ProjectStatus } from "../../types/types";

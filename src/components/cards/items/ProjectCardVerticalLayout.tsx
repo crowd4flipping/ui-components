@@ -3,8 +3,8 @@ import React, { ReactElement } from "react";
 type ProjectCardVerticalLayoutProps = {
   top: ReactElement | ReactElement[];
   bottom: ReactElement | ReactElement[];
-  street:string;
-  region:string;
+  street: string;
+  region: string;
 };
 
 export const ProjectCardVerticalLayout = ({

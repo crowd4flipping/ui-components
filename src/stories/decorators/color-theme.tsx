@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import React from "react";
 import { StoryContext } from "@storybook/react";
 
@@ -14,10 +15,7 @@ export const colorTheme = (Story: any, context: StoryContext) => {
   return (
     <div
       style={{
-       // width: "500px",
         height: "100vh",
-       //backgroundColor: "#183155",
-       // padding: "1rem"
       }}
     >
       <Story />

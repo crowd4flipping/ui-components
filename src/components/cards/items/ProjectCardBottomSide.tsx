@@ -1,6 +1,6 @@
 import React from "react";
 import { ProjectFinancialData } from "./ProjectFinancialData";
-import { Button, LinkButton } from "../../buttons";
+import { LinkButton } from "../../buttons";
 import { HorizontalFinancialData } from "./HorizontalFinancialData";
 import { ProjectTag } from "../ProjectTag";
 
