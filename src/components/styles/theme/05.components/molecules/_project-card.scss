@@ -3,9 +3,6 @@
 @import "../atoms/all-atoms";
 @import "../../theme";
 
-$_project-card-width: 30rem;
-$_project-card-vertical-width: 17rem;
-$_project-card-height: 17rem;
 
 .project-card {
   display: inline-block;
@@ -102,13 +99,6 @@ $_project-card-height: 17rem;
     font-size: $fs-md;
     font-weight: $fw-bold;
     color: var(--highlight-color);
-  }
-
-  &__extra-info {
-    font-style: italic;
-    color: var(--subtitle-color);
-    font-size: $fs-sm;
-    margin-bottom: $space-xs;
   }
 }
 

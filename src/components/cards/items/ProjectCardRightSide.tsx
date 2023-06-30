@@ -35,21 +35,15 @@ export const ProjectCardRightSide = (props: Props) => {
         totalProjectAmount={totalProjectAmount}
         status={status}
       />
-      <div>
-        <p className="project-card__extra-info">
-          {status == "in_progress" && "Este proyecto ya está en ejecución"}
-          {status == "finished" && "Este proyecto ya ha sido explotado"}
-        </p>
 
-        <LinkButton
-          size="sm"
-          fullWidth
-          variant="secondary"
-          href={`/proyectos/${projectId}`}
-        >
-          Ver proyecto
-        </LinkButton>
-      </div>
+      <LinkButton
+        size="sm"
+        fullWidth
+        variant="secondary"
+        href={`/proyectos/${projectId}`}
+      >
+        Ver proyecto
+      </LinkButton>
     </>
   );
 };

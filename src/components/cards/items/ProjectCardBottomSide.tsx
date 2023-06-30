@@ -32,26 +32,14 @@ export const ProjectCardBottomSide = (props: Props) => {
         profitability={profitability}
       />
 
-      <div>
-        {status == "in_progress" && (
-          <span className="project-card-financial-data__info">
-            Este proyecto ya está en ejecución
-          </span>
-        )}
-        {status == "finished" && (
-          <span className="project-card-financial-data__info">
-            Este proyecto ya ha sido explotado
-          </span>
-        )}
-        <LinkButton
-          size="sm"
-          href={`/proyectos/${projectId}`}
-          fullWidth
-          variant="secondary"
-        >
-          Ver proyecto
-        </LinkButton>
-      </div>
+      <LinkButton
+        size="sm"
+        href={`/proyectos/${projectId}`}
+        fullWidth
+        variant="secondary"
+      >
+        Ver proyecto
+      </LinkButton>
     </div>
   );
 };
