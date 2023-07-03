@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { colorTheme } from "../../decorators/color-theme";
-import { ProjectCardDarkTheme } from "../../../components/cards/dark-items/ProjectCardDarkTheme";
+import { ProjectCardDarkTheme } from "../../../components/cards/ProjectCardDarkTheme";
 
 const meta = {
   title: "Components/Project Card",

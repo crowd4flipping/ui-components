@@ -1,11 +1,11 @@
 import React from "react";
-import { ProjectCardRightSide } from "../items/ProjectCardRightSide";
-import { ProjectCardBottomSide } from "../items/ProjectCardBottomSide";
+import { ProjectCardRightSide } from "./items/ProjectCardRightSide";
+import { ProjectCardBottomSide } from "./items/ProjectCardBottomSide";
+import { ProjectCardImage } from "./items/ProjectCardImage";
+import { ImageWrapperDescription } from "../images";
+import { ProjectCardVerticalLayoutDarkTheme } from "./dark-items/ProjectCardVerticalLayoutDarkTheme";
+import { ProjectCardLayoutDarkTheme } from "./dark-items/ProjectCardLayoutDarkTheme";
 import "../../styles/global.scss";
-import { ProjectCardImage } from "../items/ProjectCardImage";
-import { ImageWrapperDescription } from "../../images";
-import { ProjectCardVerticalLayoutDarkTheme } from "./ProjectCardVerticalLayoutDarkTheme";
-import { ProjectCardLayoutDarkTheme } from "./ProjectCardLayoutDarkTheme";
 
 type ProjectCardRightSideProps = Parameters<
   typeof ProjectCardRightSide
