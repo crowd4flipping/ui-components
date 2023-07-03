@@ -3,7 +3,6 @@
 @import "../atoms/all-atoms";
 @import "../../theme";
 
-
 .project-card {
   display: inline-block;
   position: relative;
@@ -34,7 +33,6 @@
 
   &__top-image-wrapper {
     @extend %position-t-0;
-    background-color: red;
     width: 100%;
     padding: $space-sm;
   }
@@ -173,5 +171,28 @@ body.dark-theme .inner-bar {
   }
   &__max-amount {
     color: $surface-color-dark;
+  }
+}
+
+.project-card.dark-theme {
+  background-color: $card-color-dark;
+  color: $text-color-dark;
+}
+
+.project-card.dark-theme .progress-bar {
+  &__bar {
+    background-color: $white;
+  }
+  &__max-amount {
+    color: $text-color-dark;
+  }
+}
+
+.project-card.dark-theme .inner-bar {
+  &__bar {
+  color: $text-color;
+  }
+  &__max-amount {
+    color: $text-color;
   }
 }
