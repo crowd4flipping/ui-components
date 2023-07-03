@@ -1,69 +1,5 @@
-$_white: #ffffff;
-$_white-pale: #f6f2f2;
-$_black: #2d3038;
-
-$_dark-purple: #010f24;
-$_purple: #1b2444;
-$_light-purple: #4c5473;
-
-$_light-gray: #dbdfe2;
-$_pale-gray: #e3e9eb;
-$_gray: #e0e0e0;
-$_bluish-dark-gray: #4e6374;
-$_bluish-darker-gray: #3a4956;
-//$_transparent-light-blue-gray: #E0E4E7;
-
-$_blue-gray: #0586ad;
-$_blue: #02b3e8;
-$_sky-blue: #1ecbff;
-$_pale-blue: #9ce8ff;
-$_light-blue: #e5f9ff;
-
-$_green: #008000;
-$_light-green: #63b000;
-$_lime: #8bf502;
-$_whatsapp: #23ae56;
-$_light-whatsapp: #26c360;
-
-$_light-ambar: #ffdba0;
-$_light-brown: #935f00;
-
-$_light-orange: #ff7640;
-$_orange: #ff6200;
-
-$_dark-gold: #df9100;
-$_yellow: #ffff02;
-
-//? ===============
-
-$white: $_white;
-$black: $_black;
-$gray: $_gray;
-$dark-purple: $_dark-purple;
-$lime: $_lime;
-$light-green: $_light-green;
-
-$primary-color-pale: $_pale-blue;
-$primary-color-light: $_light-blue;
-
-$surface-color: $_white-pale;
-$surface-color-foggy: $_pale-gray;
-$surface-color-dark: $_bluish-dark-gray;
-
-$tag-bg-color: $_light-gray;
-$tag-bg-color-dark-mode: $_bluish-darker-gray;
-$tag-blue: $_blue-gray;
-$tag-light-blue: $_sky-blue;
-$tag-green: $_green;
-$tag-lime: $_lime;
-$tag-orange: $_orange;
-$tag-light-orange: $_light-orange;
-$tag-dark-yellow: $_dark-gold;
-$tag-yellow: $_yellow;
-
-
-
-//* = = = = =  = THEMING
+$white: #ffffff;
+$black: #0e0e0f;
 
 //? Light theme
 $primary-color: #02b3e8;
@@ -92,6 +28,5 @@ $background-color-dark: #010F24;
 $surface-color-dark: #122745;
 
 $card-color-dark: #294367;
-
 
 $highlight-color-dark: #8BF502;
