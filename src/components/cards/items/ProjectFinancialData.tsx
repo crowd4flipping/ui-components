@@ -33,7 +33,7 @@ export const ProjectFinancialData = (props: ProjectFinancialDataProps) => {
       )}
 
       <dl>
-        <dt>Rentabilidad anual</dt>
+        <dt>Rent. anual</dt>
         <dd className="project-card__highlight">{profitability}%</dd>
       </dl>
 

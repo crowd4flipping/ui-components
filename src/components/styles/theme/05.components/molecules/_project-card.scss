@@ -12,7 +12,7 @@
   max-width: 40rem;
   min-height: 20rem;
 
-  aspect-ratio: 1.2;
+  aspect-ratio: 1.4;
 
   background-color: var(--card-color);
   color: var(--text-color);
@@ -163,11 +163,15 @@ body.dark-theme .progress-bar {
   &__max-amount {
     margin-top: 0.07rem;
     @extend .progress-bar__max-amount;
+    color: white;
   }
 }
 
 body.dark-theme .inner-bar {
   &__bar {
+    color: $surface-color-dark;
+  }
+  &__max-amount {
     color: $surface-color-dark;
   }
 }

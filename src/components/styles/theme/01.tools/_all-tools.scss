@@ -1,5 +1,5 @@
 // Mixins and functions
 
 @mixin shadow-base($hexColor) {
-    box-shadow: 0 20px 30px -20px $hexColor;
+    box-shadow: 0 10px 50px -20px $hexColor;
 }
