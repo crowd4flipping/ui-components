@@ -21,6 +21,11 @@
 
   @include shadow-base(rgba(0, 0, 0, 0.622));
 
+  &--dark-theme{
+    background-color: $card-color-dark;
+    color: $text-color-dark;
+  }
+
   &--vertical-layout {
     position: relative;
     width: 100%;
@@ -173,7 +178,7 @@ body.dark-theme .inner-bar {
     color: $surface-color-dark;
   }
 }
-
+/* 
 .project-card.dark-theme {
   background-color: $card-color-dark;
   color: $text-color-dark;
@@ -195,4 +200,4 @@ body.dark-theme .inner-bar {
   &__max-amount {
     color: $text-color;
   }
-}
+} */

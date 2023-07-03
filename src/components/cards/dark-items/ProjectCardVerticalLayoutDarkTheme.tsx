@@ -14,7 +14,7 @@ export const ProjectCardVerticalLayoutDarkTheme = ({
   region,
 }: Props) => {
   return (
-    <div className={`project-card dark-theme project-card--vertical-layout`}>
+    <div className="project-card dark-theme project-card--vertical-layout">
       {bottom}
       {top}
       <div className="img-wrapper-title__content">
