@@ -1,10 +1,12 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { Tag } from "../../../components/cards/Tag";
+import { colorTheme } from "../../decorators/color-theme";
 
 const meta = {
   title: "Components/Tags",
   component: Tag,
   tags: ["tag"],
+  decorators: [colorTheme],
 } satisfies Meta<typeof Tag>;
 
 export default meta;
@@ -16,7 +18,6 @@ export const TagBlue: Story = {
   args: {
     color: "blue",
     children: "Blue tag",
-    isDark: false,
   },
 };
 
@@ -25,7 +26,6 @@ export const TagGreen: Story = {
   args: {
     color: "green",
     children: "Green tag",
-    isDark: false,
   },
 };
 
@@ -34,15 +34,13 @@ export const TagOrange: Story = {
   args: {
     color: "orange",
     children: "Orange tag",
-    isDark: false,
   },
 };
 
 export const TagYellow: Story = {
-  name: "Tag Yellow",
+  name: "Tag Magenta",
   args: {
-    color: "yellow",
+    color: "magenta",
     children: "Yellow tag",
-    isDark: false,
   },
 };

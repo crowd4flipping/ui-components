@@ -15,4 +15,8 @@
   &--white {
     color: $white;
   }
+
+  &--subtitle{
+    color: var(--subtitle-color);
+  }
 }

@@ -1,10 +1,12 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { ProjectTag } from "../../../components/cards/ProjectTag";
+import { colorTheme } from "../../decorators/color-theme";
 
 const meta = {
   title: "Components/Project Tag",
   component: ProjectTag,
   tags: ["tag"],
+  decorators: [colorTheme],
 } satisfies Meta<typeof ProjectTag>;
 
 export default meta;
@@ -14,7 +16,6 @@ type Story = StoryObj<typeof meta>;
 export const TagProjectInStudy: Story = {
   name: "In study",
   args: {
-    isDark: false,
     status: "in_study",
   },
 };
@@ -22,23 +23,20 @@ export const TagProjectInStudy: Story = {
 export const TagFundingProject: Story = {
   name: "Funding",
   args: {
-    isDark: false,
     status: "funding",
   },
 };
 
 export const TagActiveProject: Story = {
-  name: "Active",
+  name: "In Progress",
   args: {
-    isDark: false,
-    status: "active",
+    status: "in_progress",
   },
 };
 
 export const TagProjectFinished: Story = {
   name: "Finished",
   args: {
-    isDark: false,
     status: "finished",
   },
 };

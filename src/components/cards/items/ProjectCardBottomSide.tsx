@@ -1,7 +1,8 @@
 import React from "react";
 import { ProjectFinancialData } from "./ProjectFinancialData";
-import { Button, LinkButton } from "../../buttons";
+import { LinkButton } from "../../buttons";
 import { HorizontalFinancialData } from "./HorizontalFinancialData";
+import { ProjectTag } from "../ProjectTag";
 
 type Props = { businessModel: string; projectId: string } & Parameters<
   typeof ProjectFinancialData
@@ -14,19 +15,17 @@ export const ProjectCardBottomSide = (props: Props) => {
     status,
     totalProjectAmount,
     businessModel,
-    isDark = false,
+
     projectId,
   } = props;
 
-  const businessModelColor = isDark && "project-card__business-model--dark";
-
   return (
-    <>
-      <h4 className={`project-card__business-model ${businessModelColor}`}>
-        {businessModel}
-      </h4>
+    <div className="project-card__content-bottom">
+      <div className="project-card__header--horizontal">
+        <h4>{businessModel}</h4>
+        <ProjectTag status={status} />
+      </div>
       <HorizontalFinancialData
-        isDark={isDark}
         status={status}
         currentAmount={currentAmount}
         totalProjectAmount={totalProjectAmount}
@@ -41,6 +40,6 @@ export const ProjectCardBottomSide = (props: Props) => {
       >
         Ver proyecto
       </LinkButton>
-    </>
+    </div>
   );
 };

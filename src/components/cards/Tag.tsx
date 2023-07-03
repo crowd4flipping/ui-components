@@ -1,33 +1,26 @@
 import React from "react";
 import "../styles/global.scss";
 
-const tagColors = ["green", "blue", "yellow", "orange"] as const;
+const tagColors = ["green", "blue", "magenta", "orange"] as const;
 
 type TagColorLightMod = (typeof tagColors)[number];
 
 type TagProps = {
   children: string;
   color: TagColorLightMod;
-  isDark?: boolean;
 };
 
-export const Tag = ({ children, color, isDark = false }: TagProps) => {
+export const Tag = ({ children, color }: TagProps) => {
   const lightModeColors: Record<TagColorLightMod, string> = {
     blue: "tag--blue",
     green: "tag--green",
     orange: "tag--orange",
-    yellow: "tag--yellow",
+    magenta: "tag--magenta",
   };
 
   return (
-    <div className={`tag ${getColor(color)}`}>
+    <div className={`tag ${lightModeColors[color]}`}>
       <span>{children}</span>
     </div>
   );
-
-  function getColor(color: TagColorLightMod) {
-    return isDark
-      ? `${lightModeColors[color]}-dark-mode`
-      : lightModeColors[color];
-  }
 };

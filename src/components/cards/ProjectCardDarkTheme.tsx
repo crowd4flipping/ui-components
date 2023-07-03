@@ -1,11 +1,11 @@
 import React from "react";
-import { ProjectCardLayout } from "./items/ProjectCardLayout";
 import { ProjectCardRightSide } from "./items/ProjectCardRightSide";
-import { ProjectCardVerticalLayout } from "./items/ProjectCardVerticalLayout";
 import { ProjectCardBottomSide } from "./items/ProjectCardBottomSide";
-import "../styles/global.scss";
 import { ProjectCardImage } from "./items/ProjectCardImage";
 import { ImageWrapperDescription } from "../images";
+import { ProjectCardVerticalLayoutDarkTheme } from "./dark-items/ProjectCardVerticalLayoutDarkTheme";
+import { ProjectCardLayoutDarkTheme } from "./dark-items/ProjectCardLayoutDarkTheme";
+import "../styles/global.scss";
 
 type ProjectCardRightSideProps = Parameters<
   typeof ProjectCardRightSide
@@ -19,12 +19,12 @@ type Props = {
 } & ProjectCardRightSideProps &
   ProjectCardImageProps;
 
-export const ProjectCard = (props: Props) => {
+export const ProjectCardDarkTheme = (props: Props) => {
   const { isVertical = false } = props;
 
   if (isVertical)
     return (
-      <ProjectCardVerticalLayout
+      <ProjectCardVerticalLayoutDarkTheme
         top={<ProjectCardImage src={props.src} />}
         bottom={<ProjectCardBottomSide {...props} />}
         region={props.region}
@@ -33,7 +33,7 @@ export const ProjectCard = (props: Props) => {
     );
 
   return (
-    <ProjectCardLayout
+    <ProjectCardLayoutDarkTheme
       leftSide={
         <ImageWrapperDescription title={props.region} subtitle={props.street}>
           <ProjectCardImage src={props.src} />

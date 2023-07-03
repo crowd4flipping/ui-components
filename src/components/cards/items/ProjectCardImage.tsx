@@ -3,26 +3,19 @@ import { C4FComponentError } from "../../../errors/C4FComponentError";
 
 type ProjectCardImageProps = {
   src: string | ReactElement;
-  forVerticalLayout: boolean;
 };
 
-export const ProjectCardImage = ({
-  src,
-  forVerticalLayout,
-}: ProjectCardImageProps) => {
-  const imageHeight = forVerticalLayout ? 208 : 227;
-
+export const ProjectCardImage = ({ src }: ProjectCardImageProps) => {
   return (
     <>
       {isReactImageElement(src) ? (
-        src
+        { src }
       ) : (
         <img
-          width={272}
-          height={imageHeight}
           loading="lazy"
           alt="imagen del proyecto"
           src={src}
+          className="project-card__image"
         />
       )}
     </>

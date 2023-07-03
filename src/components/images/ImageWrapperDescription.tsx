@@ -13,12 +13,16 @@ export const ImageWrapperDescription = ({
   subtitle,
 }: ImageWrapperDescriptionProps) => {
   return (
-    <div className="img-wrapper-title">
+    <figure className="img-wrapper-title">
       {children}
       <div className="img-wrapper-title__content">
-        <p className="img-wrapper-title__title">{title}</p>
-        {subtitle && <p className="img-wrapper-title__subtitle">{subtitle}</p>}
+        <figcaption className="img-wrapper-title__title">{title}</figcaption>
+        {subtitle && (
+          <figcaption className="img-wrapper-title__subtitle">
+            {subtitle}
+          </figcaption>
+        )}
       </div>
-    </div>
+    </figure>
   );
 };

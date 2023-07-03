@@ -1,24 +1,41 @@
-import React, { ReactElement } from "react";
-import { LinkButton } from "../../buttons";
-import { ImageWrapperDescription } from "../../images/ImageWrapperDescription";
-import { ProjectCardImage } from "./ProjectCardImage";
+import React from "react";
+import { ProjectTag } from "../ProjectTag";
+import { ProjectFinancialData } from "./ProjectFinancialData";
+import { ProjectStatus } from "../../types/types";
+import { LinkButton } from "../../buttons/LinkButton";
 
-type ProjectCardRightSide = {
-  src: string | ReactElement;
+type Props = {
+  status: ProjectStatus;
+  businessModel: string;
+  currentAmount: number;
+  totalProjectAmount: number;
+  profitability: string;
   projectId: string;
-  region: string;
-  street: string;
 };
 
-export const ProjectCardRightSide = (props: ProjectCardRightSide) => {
-  const { src, projectId, region, street } = props;
+export const ProjectCardRightSide = (props: Props) => {
+  const {
+    status,
+    businessModel,
+    currentAmount,
+    totalProjectAmount,
+    profitability,
+    projectId,
+  } = props;
+
   return (
     <>
-      <div className="project-card__image">
-        <ImageWrapperDescription title={region} subtitle={street}>
-          <ProjectCardImage forVerticalLayout={false} src={src} />
-        </ImageWrapperDescription>
+      <div className="project-card__header">
+        <h4>{businessModel}</h4>
+        <ProjectTag status={status} />
       </div>
+      <ProjectFinancialData
+        currentAmount={currentAmount}
+        profitability={profitability}
+        totalProjectAmount={totalProjectAmount}
+        status={status}
+      />
+
       <LinkButton
         size="sm"
         fullWidth

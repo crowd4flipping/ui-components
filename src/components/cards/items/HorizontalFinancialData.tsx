@@ -9,44 +9,31 @@ type Props = {
   totalProjectAmount: number;
   currentAmount: number;
   profitability: string;
-  isDark: boolean;
 };
 
 export const HorizontalFinancialData = (props: Props) => {
-  const { status, totalProjectAmount, profitability, currentAmount, isDark } =
-    props;
-
-  const dataColor = isDark && "project-card-financial-data__data--dark-mode";
-  const infoColor = isDark && "project-card-financial-data__info--dark-mode";
-
+  const { status, totalProjectAmount, profitability, currentAmount } = props;
   const formatedAmount = MoneyFormatter.round(totalProjectAmount);
 
-  if (status == "in_study")
-    return <ProjectInStudyInfo withDivider={false} isDark={isDark} />;
+  if (status == "in_study") return <ProjectInStudyInfo />;
 
   return (
-    <div className="project-card-financial-data">
-      <div className="project-card-financial-data--horizontal">
-        <dl>
+    <div className="project-card__financial-data">
+      <div className="project-card__financial-data--horizontal">
+        <dl className="project-card__left-data">
           <dt>Rent. anual</dt>
-          <dd className={`project-card-financial-data__data ${dataColor}`}>
-            {profitability}%
-          </dd>
+          <dd className="project-card__highlight">{profitability}%</dd>
         </dl>
-        <dl>
+        <dl className="project-card__right-data">
           {status == "funding" ? (
             <>
               <dt>Objetivo</dt>
-              <dd className={`project-card-financial-data__data ${dataColor}`}>
-                {formatedAmount}
-              </dd>
+              <dd className="project-card__highlight">{formatedAmount}</dd>
             </>
           ) : (
             <>
               <dt>Recaudado</dt>
-              <dd className={`project-card-financial-data__data ${dataColor}`}>
-                {formatedAmount}
-              </dd>
+              <dd className="project-card__highlight">{formatedAmount}</dd>
             </>
           )}
         </dl>
@@ -56,22 +43,10 @@ export const HorizontalFinancialData = (props: Props) => {
         <dl>
           <dt>Recaudado</dt>
           <FundedProgressBar
-            isDark={isDark}
             currentAmount={currentAmount}
             maxAmount={totalProjectAmount}
           />
         </dl>
-      )}
-
-      {status == "active" && (
-        <span className={`project-card-financial-data__info ${infoColor}`}>
-          Este proyecto ya está en ejecución
-        </span>
-      )}
-      {status == "finished" && (
-        <span className={`project-card-financial-data__info ${infoColor}`}>
-          Este proyecto ya ha sido explotado
-        </span>
       )}
     </div>
   );

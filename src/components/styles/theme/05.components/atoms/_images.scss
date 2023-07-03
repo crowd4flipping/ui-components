@@ -2,32 +2,20 @@
 @import "../../01.tools/all-tools";
 @import "../../00.settings/all-settings";
 
-.img {
-  &--sm {
-    border-radius: $br-sm;
-    overflow: hidden;
-  }
-
-  &--md {
-    border-radius: $br-base;
-    overflow: hidden;
-  }
-
-  &--lg {
-    border-radius: $br-md;
-    overflow: hidden;
-  }
-}
-
 .img-wrapper-title {
-  width: fit-content;
-  height: fit-content;
   position: relative;
-
+  width: fit-content;
+  height: 100%;
+  
   &__content {
     @extend %position-t-0;
-    padding: $space-sm;
+    
     width: $full;
+    height: fit-content;
+    
+    padding: $space-sm;
+    padding-bottom: $space-md;
+
     background: linear-gradient(0deg, transparent, #0000009a);
 
 
@@ -40,6 +28,7 @@
   &__title {
     color: $white;
     font-size: $fs-base;
+    margin-bottom: .2rem;
   }
 
   &__subtitle {

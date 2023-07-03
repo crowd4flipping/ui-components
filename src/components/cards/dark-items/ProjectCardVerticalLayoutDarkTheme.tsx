@@ -1,20 +1,20 @@
 import React, { ReactElement } from "react";
 
-type ProjectCardVerticalLayoutProps = {
+type Props = {
   top: ReactElement | ReactElement[];
   bottom: ReactElement | ReactElement[];
   street: string;
   region: string;
 };
 
-export const ProjectCardVerticalLayout = ({
+export const ProjectCardVerticalLayoutDarkTheme = ({
   top,
   bottom,
   street,
   region,
-}: ProjectCardVerticalLayoutProps) => {
+}: Props) => {
   return (
-    <div className="project-card project-card--vertical-layout">
+    <div className="project-card dark-theme project-card--vertical-layout">
       {bottom}
       {top}
       <div className="img-wrapper-title__content">

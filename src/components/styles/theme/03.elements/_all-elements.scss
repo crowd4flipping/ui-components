@@ -6,7 +6,7 @@ p {
   font-family: $ff-base;
   font-size: $fs-md;
   font-weight: $fw-base;
-  color: $text-color;
+  color: var(--text-color);
 }
 
 img{
@@ -16,23 +16,23 @@ img{
 h1{
   font-size: $fs-2xl;
   font-weight: $fw-bolder;
-  color: $text-color;
+  color: var(--text-color);
 }
 
 h2{
   font-size: $fs-xl;
   font-weight: $fw-bolder;
-  color: $text-color;
+  color: var(--text-color);
 }
 
 h3{
   font-size: $fs-lg;
   font-weight: $fw-bolder;
-  color: $text-color;
+  color: var(--text-color);
 }
 
 h4{
   font-size: $fs-md;
   font-weight: $fw-bold;
-  color: $text-color;
+  color: var(--text-color);
 }

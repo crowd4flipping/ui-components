@@ -1,16 +1,13 @@
 import React, { ReactElement } from "react";
 
-type ProjectLayoutProps = {
+type Props = {
   leftSide: ReactElement;
   rightSide: ReactElement;
 };
 
-export const ProjectCardLayout = ({
-  leftSide,
-  rightSide,
-}: ProjectLayoutProps) => {
+export const ProjectCardLayoutDarkTheme = ({ leftSide, rightSide }: Props) => {
   return (
-    <div className="project-card">
+    <div className="project-card dark-theme">
       <div className="project-card__content">
         <div className="project-card__image-wrapper">{leftSide}</div>
         <div className="project-card__content-right">{rightSide}</div>
