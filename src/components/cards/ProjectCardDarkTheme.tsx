@@ -5,7 +5,7 @@ import { ProjectCardImage } from "./items/ProjectCardImage";
 import { ImageWrapperDescription } from "../images";
 import { ProjectCardVerticalLayoutDarkTheme } from "./dark-items/ProjectCardVerticalLayoutDarkTheme";
 import { ProjectCardLayoutDarkTheme } from "./dark-items/ProjectCardLayoutDarkTheme";
-import "../../styles/global.scss";
+import "../styles/global.scss";
 
 type ProjectCardRightSideProps = Parameters<
   typeof ProjectCardRightSide
