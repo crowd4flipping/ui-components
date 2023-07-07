@@ -1,0 +1,55 @@
+.option {
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5rem;
+  padding: $space-xs $space-base;
+  gap: 1rem;
+
+  background-color: transparent;
+  color: var(--text-color);
+  font-size: $fs-base;
+
+  border: $bw-sm solid var(--primary-color);
+
+  transition: 0.15s;
+
+  &[data-state="checked"] {
+    background-color: rgba(var(--primary-color-rgb), 0.3);
+    color: var(--text-color);
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 2px var(--primary-color-hover);
+  }
+
+  &:hover {
+    background-color: rgba($primary-color-hover, 0.1);
+  }
+
+  &--full-width {
+    width: 100%;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: $space-xs;
+    width: fit-content;
+
+    &--horizontal {
+      flex-direction: row;
+    }
+
+    &--full-width {
+      width: 100%;
+      display: grid;
+    }
+  }
+
+  &__label {
+    cursor: pointer;
+  }
+}

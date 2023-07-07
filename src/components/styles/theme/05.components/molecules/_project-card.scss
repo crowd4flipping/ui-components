@@ -19,7 +19,7 @@
   border-radius: $br-md;
   border: $bw-xs solid rgba($white, 0.1);
 
-  @include shadow-base(rgba(0, 0, 0, 0.622));
+  @include shadow-lg(rgba(0, 0, 0, 0.622));
 
   &--dark-theme{
     background-color: $card-color-dark;
