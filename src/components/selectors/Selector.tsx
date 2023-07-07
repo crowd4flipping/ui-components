@@ -38,6 +38,7 @@ const Selector = (props: Props) => {
           <ChevronDownIcon width={20} height={20} />
         </Select.Icon>
       </Select.Trigger>
+
       <Select.Portal>
         <Select.Content className="selector__content">
           <Select.ScrollUpButton className="selector__scroll-button">

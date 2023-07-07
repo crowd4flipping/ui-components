@@ -17,12 +17,24 @@ export const MySelector: Story = {
   name: "Selector",
   args: {
     ariaLabel: "status",
-    defaultValue: "Manzana",
-    placeholder: "Select a status",
+    placeholder: "Choose a fruit",
     onValueChange(value) {
       console.log(value);
     },
     options: [
+      {
+        sectionLabel: "Fruits",
+        values: [{ value: "Mango" }, { value: "Melon" }, { value: "Apple" }],
+      },
+      {
+        sectionLabel: "Vegetables",
+        values: [
+          { value: "Lettuce" },
+          { value: "Carrot" },
+          { value: "Potato" },
+        ],
+      },
+    ] /* [
       {
         sectionLabel: "Frutas",
         values: [{ value: "Manzana" }, { value: "Pera" }, { value: "Melon" }],
@@ -39,6 +51,6 @@ export const MySelector: Story = {
         sectionLabel: "Carnes",
         values: [{ value: "Ternera" }, { value: "Cerdo" }, { value: "Pollo" }],
       },
-    ],
+    ], */,
   },
 };
