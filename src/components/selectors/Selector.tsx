@@ -96,7 +96,9 @@ const SelectItem = React.forwardRef<HTMLDivElement, SelectItemProps>(
         disabled={disabled}
         ref={forwardedRef}
       >
-        <Select.ItemText>{props.children}</Select.ItemText>
+        <Select.ItemText>
+          <span className="fw--md">{props.children}</span>
+        </Select.ItemText>
         <Select.ItemIndicator className="selector__item-indicator">
           <CheckIcon />
         </Select.ItemIndicator>

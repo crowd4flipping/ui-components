@@ -11,12 +11,17 @@
 }
 
 .fc {
-
   &--white {
     color: $white;
   }
 
   &--subtitle{
     color: var(--subtitle-color);
+  }
+}
+
+.fw{
+  &--md{
+    font-weight: $fw-medium;
   }
 }
