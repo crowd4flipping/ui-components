@@ -34,23 +34,6 @@ export const MySelector: Story = {
           { value: "Potato" },
         ],
       },
-    ] /* [
-      {
-        sectionLabel: "Frutas",
-        values: [{ value: "Manzana" }, { value: "Pera" }, { value: "Melon" }],
-      },
-      {
-        sectionLabel: "Verduras",
-        values: [
-          { value: "Lechuga", isDesabled: true },
-          { value: "Zanahoria", isDesabled: true },
-          { value: "Patata" },
-        ],
-      },
-      {
-        sectionLabel: "Carnes",
-        values: [{ value: "Ternera" }, { value: "Cerdo" }, { value: "Pollo" }],
-      },
-    ], */,
+    ],
   },
 };

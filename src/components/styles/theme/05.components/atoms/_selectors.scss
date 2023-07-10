@@ -12,6 +12,7 @@
   border: $bw-sm solid var(--primary-color);
   font-size: $fs-base;
   
+  font-weight: $fw-medium;
 
   &:focus {
     box-shadow: 0 0 0 2px var(--primary-color-hover);
