@@ -11,21 +11,19 @@
   color: var(--text-color);
   font-size: $fs-base;
 
-  border: $bw-sm solid var(--primary-color);
+  border: $bw-sm solid rgba(var(--primary-color-rgb), 0.5);
 
   transition: 0.15s;
 
   &[data-state="checked"] {
-    background-color: rgba(var(--primary-color-rgb), 0.3);
+    border: $bw-sm solid var(--primary-color);
+    background-color: rgba(var(--primary-color-rgb), 0.15);
     color: var(--text-color);
   }
 
-  &:focus {
-    box-shadow: 0 0 0 2px var(--primary-color-hover);
-  }
-
   &:hover {
-    background-color: rgba($primary-color-hover, 0.1);
+    box-shadow: 0 0 0 2px var(--primary-color-hover);
+    background-color: rgba($primary-color-hover, 0.15);
   }
 
   &--full-width {
