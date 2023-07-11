@@ -9,6 +9,7 @@ type Props = {
   onValueChange: (value: string) => void;
   arialLabel: string;
   values: string[];
+  value?: string;
 };
 
 export const Options = (props: Props) => {
@@ -20,6 +21,7 @@ export const Options = (props: Props) => {
         fullWidth,
         isHorizontal,
       })}`}
+      value={props.value}
       defaultValue={props.defaultValue}
       onValueChange={props.onValueChange}
       aria-label={props.arialLabel}
