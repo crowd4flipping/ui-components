@@ -24,6 +24,7 @@ type Props = {
   defaultValue?: string;
   options: OptionsProps[];
   fullWidth?: boolean;
+  value?: string;
 };
 
 const Selector = (props: Props) => {
@@ -31,7 +32,11 @@ const Selector = (props: Props) => {
     props;
 
   return (
-    <Select.Root onValueChange={onValueChange} defaultValue={defaultValue}>
+    <Select.Root
+      onValueChange={onValueChange}
+      defaultValue={defaultValue}
+      value={props.value}
+    >
       <Select.Trigger className="selector" aria-label={ariaLabel}>
         <Select.Value placeholder={placeholder} />
         <Select.Icon className="selector_icon">

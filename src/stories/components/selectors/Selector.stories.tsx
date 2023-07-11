@@ -16,7 +16,9 @@ type Story = StoryObj<typeof meta>;
 export const MySelector: Story = {
   name: "Selector",
   args: {
+    value: "Melon",
     ariaLabel: "status",
+    defaultValue: "Apple",
     placeholder: "Choose a fruit",
     onValueChange(value) {
       console.log(value);
