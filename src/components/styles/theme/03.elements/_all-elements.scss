@@ -1,5 +1,6 @@
 // Defining the html elements: h1, img, a ...
 @import "../00.settings/all-settings.scss";
+@import "../01.tools/all-tools";
 
 p {
   font-size: $fs-base;
@@ -9,29 +10,41 @@ p {
   color: var(--text-color);
 }
 
-img{
+img {
   display: block;
 }
 
-h1{
+h1 {
   font-size: $fs-2xl;
   font-weight: $fw-bolder;
   color: var(--text-color);
+
+  @include isSmallerRange {
+    font-size: $fs-xl;
+  }
 }
 
-h2{
+h2 {
   font-size: $fs-xl;
   font-weight: $fw-bolder;
   color: var(--text-color);
+
+  @include isSmallerRange {
+    font-size: $fs-lg;
+  }
 }
 
-h3{
+h3 {
   font-size: $fs-lg;
   font-weight: $fw-bolder;
   color: var(--text-color);
+
+  @include isSmallerRange {
+    font-size: $fs-md;
+  }
 }
 
-h4{
+h4 {
   font-size: $fs-md;
   font-weight: $fw-bold;
   color: var(--text-color);

@@ -22,7 +22,7 @@ export const MyProjectCardDarkTheme: Story = {
     region: "Baleares, Palma",
     street: "C/ Santiago el hermoso",
     isVertical: true,
-    projectId: "https://crowd4flipping.com/",
+    href: "https://crowd4flipping.com/",
     businessModel: "House Flipping",
     status: "in_progress",
     src: imageUrl(),

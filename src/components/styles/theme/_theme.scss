@@ -1,16 +1,18 @@
 @use "./00.settings/colors";
+@import "./01.tools/all-tools";
 
 :root {
   --primary-color: #{$primary-color};
+  --primary-color-rgb: #{hexToRGB($primary-color)};
   --primary-color-hover: #{$primary-color-hover};
 
   --text-color: #{$text-color};
   --subtitle-color: #{$subtitle-color};
-
+  
   --background-color: #{$background-color};
-
+  
   --surface-color: #{$surface-color};
-
+  
   --card-color:  #{$card-color};
   
   --highlight-color: #{$highlight-color};

@@ -10,7 +10,7 @@ type Props = {
   currentAmount: number;
   totalProjectAmount: number;
   profitability: string;
-  projectId: string;
+  href: string;
 };
 
 export const ProjectCardRightSide = (props: Props) => {
@@ -20,7 +20,7 @@ export const ProjectCardRightSide = (props: Props) => {
     currentAmount,
     totalProjectAmount,
     profitability,
-    projectId,
+    href,
   } = props;
 
   return (
@@ -36,12 +36,7 @@ export const ProjectCardRightSide = (props: Props) => {
         status={status}
       />
 
-      <LinkButton
-        size="sm"
-        fullWidth
-        variant="secondary"
-        href={`/proyectos/${projectId}`}
-      >
+      <LinkButton size="sm" fullWidth variant="secondary" href={href}>
         Ver proyecto
       </LinkButton>
     </>

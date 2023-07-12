@@ -4,7 +4,7 @@ import { LinkButton } from "../../buttons";
 import { HorizontalFinancialData } from "./HorizontalFinancialData";
 import { ProjectTag } from "../ProjectTag";
 
-type Props = { businessModel: string; projectId: string } & Parameters<
+type Props = { businessModel: string; href: string } & Parameters<
   typeof ProjectFinancialData
 >[number];
 
@@ -15,8 +15,7 @@ export const ProjectCardBottomSide = (props: Props) => {
     status,
     totalProjectAmount,
     businessModel,
-
-    projectId,
+    href,
   } = props;
 
   return (
@@ -32,12 +31,7 @@ export const ProjectCardBottomSide = (props: Props) => {
         profitability={profitability}
       />
 
-      <LinkButton
-        size="sm"
-        href={`/proyectos/${projectId}`}
-        fullWidth
-        variant="secondary"
-      >
+      <LinkButton size="sm" href={href} fullWidth variant="secondary">
         Ver proyecto
       </LinkButton>
     </div>

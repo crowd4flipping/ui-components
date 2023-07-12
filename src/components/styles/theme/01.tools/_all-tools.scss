@@ -1,5 +1,44 @@
 // Mixins and functions
+@use "../00.settings/screen-sizes";
 
-@mixin shadow-base($hexColor) {
-    box-shadow: 0 10px 50px -20px $hexColor;
+@mixin shadow-sm($hexColor) {
+  box-shadow: 0 2px 10px -5px $hexColor;
+}
+
+@mixin shadow-lg($hexColor) {
+  box-shadow: 0 10px 50px -20px $hexColor;
+}
+
+@function hexToRGB($hex) {
+  @return red($hex), green($hex), blue($hex);
+}
+
+@mixin isMobile {
+  @media (max-width: $sm) {
+    @content;
+  }
+}
+
+@mixin isSmallerRange {
+  @media (max-width: $md) {
+    @content;
+  }
+}
+
+@mixin isMediumRange {
+  @media (min-width: calc($md + 1px)) and (max-width: $lg) {
+    @content;
+  }
+}
+
+@mixin isLarge {
+  @media (min-width: calc($lg + 1px)) and (max-width: $xl) {
+    @content;
+  }
+}
+
+@mixin isLargerRange {
+  @media (min-width: calc($lg + 1px)) {
+    @content;
+  }
 }

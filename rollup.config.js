@@ -18,13 +18,16 @@ export default [
       },
     ],
     plugins: [
-      resolve(),
+      resolve({
+        moduleDirectories: ["node_modules"],
+      }),
       commonjs(),
       typescript({ tsconfig: "./tsconfig.json" }),
       postcss({
         plugins: [],
       }),
     ],
+    external: ["react", "react-dom"],
   },
   {
     input: "dist/types/index.d.ts",

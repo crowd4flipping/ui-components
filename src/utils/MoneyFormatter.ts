@@ -18,7 +18,7 @@ export class MoneyFormatter {
     const scaledNumber = amount / Math.pow(10, suffixIndex * 3);
 
     const format = new Intl.NumberFormat("en-US", {
-      maximumFractionDigits: suffixIndex == 1 ? 0 : 1,
+      maximumFractionDigits: suffixIndex == 0 ? 0 : 1,
     });
 
     return format.format(scaledNumber) + suffixes[suffixIndex] + " €";

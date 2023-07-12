@@ -17,7 +17,7 @@ export const InnerBar = (props: InnerBarProps) => {
       <div
         className="inner-bar__amount-wrapper"
         style={{
-          width: `${percentageToFund + 102}%`,
+          width: `${percentageToFund + 100}%`,
         }}
       >
         <span className="inner-bar__max-amount">faltan: {roundMoney}</span>
