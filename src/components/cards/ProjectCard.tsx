@@ -25,7 +25,12 @@ export const ProjectCard = (props: Props) => {
   if (isVertical)
     return (
       <ProjectCardVerticalLayout
-        top={<ProjectCardImage src={props.src} />}
+        top={
+          <ProjectCardImage
+            alt={`proyecto de tipo ${props.businessModel}`}
+            src={props.src}
+          />
+        }
         bottom={<ProjectCardBottomSide {...props} />}
         region={props.region}
         street={props.street}
@@ -36,7 +41,10 @@ export const ProjectCard = (props: Props) => {
     <ProjectCardLayout
       leftSide={
         <ImageWrapperDescription title={props.region} subtitle={props.street}>
-          <ProjectCardImage src={props.src} />
+          <ProjectCardImage
+            alt={`proyecto de tipo ${props.businessModel}`}
+            src={props.src}
+          />
         </ImageWrapperDescription>
       }
       rightSide={<ProjectCardRightSide {...props} />}

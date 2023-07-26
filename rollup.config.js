@@ -27,7 +27,7 @@ export default [
         plugins: [],
       }),
     ],
-    external: ["react", "react-dom"],
+    external: ["react", "react-dom", "next/image"],
   },
   {
     input: "dist/types/index.d.ts",
