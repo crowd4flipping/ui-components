@@ -6,18 +6,9 @@ import { ImageWrapperDescription } from "../images";
 import { ProjectCardVerticalLayoutDarkTheme } from "./dark-items/ProjectCardVerticalLayoutDarkTheme";
 import { ProjectCardLayoutDarkTheme } from "./dark-items/ProjectCardLayoutDarkTheme";
 import "../styles/global.scss";
+import { ProjectCard } from "./ProjectCard";
 
-type ProjectCardRightSideProps = Parameters<
-  typeof ProjectCardRightSide
->[number];
-type ProjectCardImageProps = Parameters<typeof ProjectCardImage>[number];
-
-type Props = {
-  isVertical?: boolean;
-  region: string;
-  street: string;
-} & ProjectCardRightSideProps &
-  ProjectCardImageProps;
+type Props = Parameters<typeof ProjectCard>[number];
 
 export const ProjectCardDarkTheme = (props: Props) => {
   const { isVertical = false } = props;
@@ -25,7 +16,12 @@ export const ProjectCardDarkTheme = (props: Props) => {
   if (isVertical)
     return (
       <ProjectCardVerticalLayoutDarkTheme
-        top={<ProjectCardImage src={props.src} />}
+        top={
+          <ProjectCardImage
+            alt={`proyecto de tipo ${props.businessModel}`}
+            src={props.src}
+          />
+        }
         bottom={<ProjectCardBottomSide {...props} />}
         region={props.region}
         street={props.street}
@@ -36,7 +32,10 @@ export const ProjectCardDarkTheme = (props: Props) => {
     <ProjectCardLayoutDarkTheme
       leftSide={
         <ImageWrapperDescription title={props.region} subtitle={props.street}>
-          <ProjectCardImage src={props.src} />
+          <ProjectCardImage
+            alt={`proyecto de tipo ${props.businessModel}`}
+            src={props.src}
+          />
         </ImageWrapperDescription>
       }
       rightSide={<ProjectCardRightSide {...props} />}

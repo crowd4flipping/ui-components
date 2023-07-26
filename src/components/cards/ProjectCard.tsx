@@ -10,7 +10,10 @@ import { ImageWrapperDescription } from "../images";
 type ProjectCardRightSideProps = Parameters<
   typeof ProjectCardRightSide
 >[number];
-type ProjectCardImageProps = Parameters<typeof ProjectCardImage>[number];
+type ProjectCardImageProps = Omit<
+  Parameters<typeof ProjectCardImage>[number],
+  "alt"
+>;
 
 type Props = {
   isVertical?: boolean;
