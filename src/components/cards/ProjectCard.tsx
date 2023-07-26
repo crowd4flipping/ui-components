@@ -10,7 +10,10 @@ import { ImageWrapperDescription } from "../images";
 type ProjectCardRightSideProps = Parameters<
   typeof ProjectCardRightSide
 >[number];
-type ProjectCardImageProps = Parameters<typeof ProjectCardImage>[number];
+type ProjectCardImageProps = Omit<
+  Parameters<typeof ProjectCardImage>[number],
+  "alt"
+>;
 
 type Props = {
   isVertical?: boolean;
@@ -25,7 +28,14 @@ export const ProjectCard = (props: Props) => {
   if (isVertical)
     return (
       <ProjectCardVerticalLayout
-        top={<ProjectCardImage src={props.src} />}
+        top={
+          <ProjectCardImage
+            alt={`proyecto de tipo ${props.businessModel}`}
+            src={props.src}
+            width={props.width}
+            height={props.height}
+          />
+        }
         bottom={<ProjectCardBottomSide {...props} />}
         region={props.region}
         street={props.street}
@@ -36,7 +46,12 @@ export const ProjectCard = (props: Props) => {
     <ProjectCardLayout
       leftSide={
         <ImageWrapperDescription title={props.region} subtitle={props.street}>
-          <ProjectCardImage src={props.src} />
+          <ProjectCardImage
+            alt={`proyecto de tipo ${props.businessModel}`}
+            width={props.width}
+            height={props.height}
+            src={props.src}
+          />
         </ImageWrapperDescription>
       }
       rightSide={<ProjectCardRightSide {...props} />}
