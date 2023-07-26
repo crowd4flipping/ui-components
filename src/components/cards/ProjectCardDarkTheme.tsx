@@ -20,6 +20,8 @@ export const ProjectCardDarkTheme = (props: Props) => {
           <ProjectCardImage
             alt={`proyecto de tipo ${props.businessModel}`}
             src={props.src}
+            width={props.width}
+            height={props.height}
           />
         }
         bottom={<ProjectCardBottomSide {...props} />}
@@ -35,6 +37,8 @@ export const ProjectCardDarkTheme = (props: Props) => {
           <ProjectCardImage
             alt={`proyecto de tipo ${props.businessModel}`}
             src={props.src}
+            width={props.width}
+            height={props.height}
           />
         </ImageWrapperDescription>
       }

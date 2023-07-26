@@ -32,6 +32,8 @@ export const ProjectCard = (props: Props) => {
           <ProjectCardImage
             alt={`proyecto de tipo ${props.businessModel}`}
             src={props.src}
+            width={props.width}
+            height={props.height}
           />
         }
         bottom={<ProjectCardBottomSide {...props} />}
@@ -46,6 +48,8 @@ export const ProjectCard = (props: Props) => {
         <ImageWrapperDescription title={props.region} subtitle={props.street}>
           <ProjectCardImage
             alt={`proyecto de tipo ${props.businessModel}`}
+            width={props.width}
+            height={props.height}
             src={props.src}
           />
         </ImageWrapperDescription>
