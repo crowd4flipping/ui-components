@@ -18,15 +18,14 @@ export const LinkButton = ({
   const width = fullWidth && "btn--full-width";
 
   return (
-    <a
-      rel="noreferrer"
-      target={newTab ? "_blank" : "_self"}
-      href={href}
-      className={`link-btn fit-content ${buttonStyle(
-        variant
-      )} ${width} ${btnSize(size)} inline-block cursor-pointer`}
-    >
-      {children}
+    <a rel="noreferrer" target={newTab ? "_blank" : "_self"} href={href}>
+      <div
+        className={`link-btn fit-content ${buttonStyle(
+          variant
+        )} ${width} ${btnSize(size)} inline-block cursor-pointer`}
+      >
+        {children}
+      </div>
     </a>
   );
 

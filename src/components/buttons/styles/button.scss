@@ -1,7 +1,9 @@
 @use "../../styles/theme/theme";
 @import "../../styles/theme/00.settings/all-settings";
 
-%base{
+%base {
+  box-sizing: border-box;
+  display: inline-block;
   font-family: $ff-base;
   padding: $space-xs $space-sm;
   -webkit-border-radius: $br-sm;
@@ -14,10 +16,17 @@
   transition: 0.3s;
 }
 
+a {
+  color: inherit;
+  text-decoration: inherit;
+  cursor: inherit;
+}
+
 .link-btn {
   @extend %base;
   text-decoration: inherit;
 }
+
 
 .btn {
   @extend %base;
