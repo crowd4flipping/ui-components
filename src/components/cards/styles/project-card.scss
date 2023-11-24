@@ -114,6 +114,11 @@
     &--horizontal {
       @extend %flex-space-between;
     }
+
+    &--in-study{
+      font-size: $fs-base;
+      color: var(--subtitle-color);
+    }
   }
 
   &__left-data {
