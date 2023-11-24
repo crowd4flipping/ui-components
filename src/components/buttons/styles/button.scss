@@ -1,0 +1,60 @@
+@use "../../styles/theme/theme";
+@import "../../styles/theme/00.settings/all-settings";
+
+%base{
+  font-family: $ff-base;
+  padding: $space-xs $space-sm;
+  -webkit-border-radius: $br-sm;
+  -moz-border-radius: $br-sm;
+  border-radius: $br-sm;
+  text-align: center;
+  font-weight: $fw-medium;
+  border: $bw-sm solid transparent;
+
+  transition: 0.3s;
+}
+
+.link-btn {
+  @extend %base;
+  text-decoration: inherit;
+}
+
+.btn {
+  @extend %base;
+
+  &--full-width {
+    padding: $space-xs 0rem;
+    width: $full;
+  }
+
+  &--primary {
+    background-color: var(--primary-color);
+    color: $white;
+
+    &:hover {
+      background-color: var(--primary-color-hover);
+    }
+  }
+
+  &--secondary {
+    background-color: transparent;
+    border: $bw-sm solid var(--primary-color);
+    color: var(--text-color);
+
+    &:hover {
+      opacity: 0.8;
+      border-color: var(--primary-color-hover);
+      background-color: rgba(#e5f9ff, 0.3);
+    }
+  }
+
+  &--sm {
+    padding: $space-xs $space-sm;
+    font-size: $fs-sm;
+  }
+
+  &--lg {
+    padding: $space-xs $space-base;
+    font-size: $fs-md;
+  }
+}

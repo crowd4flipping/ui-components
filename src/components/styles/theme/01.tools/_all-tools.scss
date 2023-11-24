@@ -1,5 +1,4 @@
 // Mixins and functions
-@use "../00.settings/screen-sizes";
 
 @mixin shadow-sm($hexColor) {
   box-shadow: 0 2px 10px -5px $hexColor;

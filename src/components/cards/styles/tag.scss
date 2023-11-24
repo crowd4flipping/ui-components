@@ -1,0 +1,32 @@
+@use "../../styles/theme/theme";
+@import "../../styles/theme/00.settings/all-settings";
+
+.tag {
+  @extend %paragraph;
+
+  display: inline-block;
+  font-size: $fs-base;
+  padding: $space-2xs $space-xs;
+
+  border-radius: $br-sm;
+
+  &--blue {
+    color: #02b3e8;
+    background-color: rgba(#02b3e8, 0.2);
+  }
+
+  &--green {
+    color: #40c52b;
+    background-color: rgba(#40c52b, 0.2);
+  }
+
+  &--orange {
+    color: #ff4d01;
+    background-color: rgba(#ff4d01, 0.2);
+  }
+
+  &--magenta {
+    color: #f159f4;
+    background-color: rgba(#f159f4, 0.2);
+  }
+}

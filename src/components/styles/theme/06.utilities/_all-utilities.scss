@@ -1,7 +1,3 @@
-@import "../00.settings/all-settings";
-@import "./typography";
-@import "./dark-theme";
-
 // Our Utility classes (like Tailwind does)
 // Things to center and structuring elements: margins, paddings, center elements, etc.
 // example: is-centered, is-error, etc
@@ -13,4 +9,8 @@
 
 .cursor-pointer {
   cursor: pointer;
+}
+
+.fit-content{
+  width: fit-content;
 }

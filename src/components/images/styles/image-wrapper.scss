@@ -1,0 +1,45 @@
+@use "../../styles/theme/04.objects/all-objects";
+@import "../../styles/theme/01.tools/all-tools";
+@import "../../styles/theme/00.settings/all-settings";
+
+.img-wrapper-title {
+  @extend %paragraph;
+
+  position: relative;
+  width: fit-content;
+  height: 100%;
+
+  & div {
+    box-sizing: border-box;
+  }
+
+  &__content {
+    @extend %position-t-0;
+
+    width: $full;
+    height: fit-content;
+
+    padding: $space-sm;
+    padding-bottom: $space-md;
+
+    background: linear-gradient(0deg, transparent, #0000009a);
+
+    &--bottom {
+      bottom: 0rem;
+      background: linear-gradient(0deg, #0000009a, transparent);
+    }
+  }
+
+  &__title {
+    margin: 0;
+    color: $white;
+    font-size: $fs-base;
+    margin-bottom: 0.2rem;
+  }
+
+  &__subtitle {
+    margin: 0;
+    color: $white;
+    font-size: $fs-sm;
+  }
+}

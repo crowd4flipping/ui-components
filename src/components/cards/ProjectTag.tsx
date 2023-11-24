@@ -1,6 +1,7 @@
 import React, { ReactElement } from "react";
 import { Tag } from "./Tag";
-import "../styles/global.scss";
+//import "../styles/theme/index.scss";
+import "./styles/project-card.scss";
 import { ProjectStatus } from "../types/types";
 
 type ProjectTagProps = {

@@ -1,11 +1,8 @@
 import React from "react";
-import { Button } from "./Button";
-import "../styles/global.scss";
+import { ButtonProps, ButtonSize, ButtonVariant } from "./types/types";
+import "./styles/button.scss";
 
-type LinkButtonVariant = Parameters<typeof Button>[number]["variant"];
-type LinkButtonSize = Parameters<typeof Button>[number]["size"];
-
-type LinkButtonProps = Omit<Parameters<typeof Button>[number], "type"> & {
+type LinkButtonProps = Omit<ButtonProps, "type"> & {
   href: string;
   newTab?: boolean;
 };
@@ -16,28 +13,29 @@ export const LinkButton = ({
   fullWidth,
   href,
   newTab = false,
-  size,
+  size = "md",
 }: LinkButtonProps) => {
   const width = fullWidth && "btn--full-width";
 
   return (
-    <a rel="noreferrer" target={newTab ? "_blank" : "_self"} href={href}>
-      <div
-        className={`btn ${buttonStyle(variant)} ${width} ${btnSize(
-          size
-        )} inline-block cursor-pointer`}
-      >
-        {children}
-      </div>
+    <a
+      rel="noreferrer"
+      target={newTab ? "_blank" : "_self"}
+      href={href}
+      className={`link-btn fit-content ${buttonStyle(
+        variant
+      )} ${width} ${btnSize(size)} inline-block cursor-pointer`}
+    >
+      {children}
     </a>
   );
 
-  function btnSize(buttonSize: LinkButtonSize) {
+  function btnSize(buttonSize: ButtonSize) {
     if (buttonSize === "sm") return "btn--sm";
     if (buttonSize === "lg") return "btn--lg";
   }
 
-  function buttonStyle(variant: LinkButtonVariant) {
+  function buttonStyle(variant: ButtonVariant) {
     if (variant == "primary") return "btn--primary";
     if (variant == "secondary") return "btn--secondary";
     if (variant == "tertiary") return "btn--tertiary";

@@ -5,7 +5,7 @@ import {
   ChevronDownIcon,
   ChevronUpIcon,
 } from "@radix-ui/react-icons";
-import "../styles/global.scss";
+import "./styles/selector.scss";
 
 type Value = {
   value: string;

@@ -1,5 +1,5 @@
 import React, { ReactElement } from "react";
-import "../styles/global.scss";
+import "./styles/image-wrapper.scss";
 
 type ImageWrapperDescriptionProps = {
   children: ReactElement;

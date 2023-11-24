@@ -1,20 +1,7 @@
-import React, { ReactComponentElement } from "react";
-import "../styles/global.scss";
+import React from "react";
+import "./styles/button.scss";
 import { unhandledTyles } from "../../utils/utils";
-
-type ButtonVariant = "primary" | "secondary";
-
-type ReactButtonProps = Pick<
-  ReactComponentElement<"button">["props"],
-  "children" | "type" | "onClick"
->;
-type ButtonSize = "sm" | "md" | "lg";
-
-type ButtonProps = ReactButtonProps & {
-  fullWidth?: boolean;
-  variant: ButtonVariant;
-  size?: ButtonSize;
-};
+import { ButtonProps, ButtonSize, ButtonVariant } from "./types/types";
 
 export const Button = ({
   children,

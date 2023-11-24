@@ -1,0 +1,98 @@
+@use "../../styles/theme/theme";
+@import "../../styles/theme/00.settings/all-settings";
+@import "../../styles/theme/01.tools/all-tools";
+
+.selector {
+  @extend %paragraph;
+  background-color: transparent;
+
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5rem;
+  padding: $space-2xs $space-base;
+  gap: 5px;
+  color: var(--text-color);
+  border: $bw-sm solid var(--primary-color);
+  font-size: $fs-base;
+
+  font-weight: $fw-medium;
+
+  &:focus {
+    box-shadow: 0 0 0 2px var(--primary-color-hover);
+  }
+
+  &:hover {
+    background-color: rgba($primary-color-hover, 0.1);
+  }
+
+  &_icon {
+    color: var(--text-color);
+  }
+
+  &__content {
+    @extend %paragraph;
+
+    overflow: hidden;
+    background-color: var(--card-color);
+    border-radius: $br-base;
+    @include shadow-lg(rgba(0, 0, 0, 0.748));
+  }
+
+  &__scroll-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2.2rem;
+    background-color: var(--card-color);
+    color: var(--text-color);
+    cursor: default;
+  }
+
+  &__viewport {
+    padding: $space-xs;
+  }
+
+  &__item {
+    line-height: 1;
+    color: var(--text-color);
+    border-radius: $br-sm;
+    display: flex;
+    align-items: center;
+    padding: $space-xs 2em;
+    position: relative;
+    user-select: none;
+
+    &[data-disabled] {
+      color: var(--subtitle-color);
+      pointer-events: none;
+    }
+
+    &[data-highlighted] {
+      outline: none;
+      background-color: var(--surface-color);
+    }
+  }
+
+  &__label {
+    padding: $space-sm $space-md $space-sm $space-sm;
+    text-align: left;
+    color: var(--subtitle-color);
+  }
+
+  &__separator {
+    height: 1px;
+    background-color: var(--subtitle-color);
+    margin: 5px;
+  }
+
+  &__item-indicator {
+    position: absolute;
+    left: 0;
+    width: 25px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

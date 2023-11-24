@@ -6,6 +6,7 @@ type Props = {
   NextImageComponent?: React.ElementType;
   width?: number;
   height?: number;
+  lazyLoad?: boolean;
 };
 
 export const ProjectCardImage = ({
@@ -14,6 +15,7 @@ export const ProjectCardImage = ({
   NextImageComponent,
   width,
   height,
+  lazyLoad = true,
 }: Props) => {
   const hasSize = width && height;
   try {
@@ -24,11 +26,12 @@ export const ProjectCardImage = ({
         layout: hasSize ? undefined : "fill",
         width,
         height,
+        loading: lazyLoad ? "lazy" : "eager",
       });
     } else {
       return (
         <img
-          loading="lazy"
+          loading={lazyLoad ? "lazy" : "eager"}
           alt={alt}
           src={src}
           className="project-card__image"
