@@ -3,6 +3,7 @@ import commonjs from "@rollup/plugin-commonjs";
 import typescript from "@rollup/plugin-typescript";
 import dts from "rollup-plugin-dts";
 import postcss from "rollup-plugin-postcss";
+//import postcssJitProps from "postcss-jit-props";
 
 export default [
   {
@@ -24,8 +25,12 @@ export default [
       commonjs(),
       typescript({ tsconfig: "./tsconfig.json" }),
       postcss({
-        extract: "styles.css",
-        plugins: [],
+        // extract: "styles.css",
+        plugins: [
+          /*  postcssJitProps({
+            files: ["./src/components/styles/theme/_theme.scss"],
+          }), */
+        ],
       }),
     ],
     external: ["react", "react-dom", "next/image"],

@@ -1,6 +1,6 @@
 import React from "react";
 import { ButtonProps, ButtonSize, ButtonVariant } from "./types/types";
-import "./styles/button.scss";
+import "./styles/link-button.scss";
 
 type LinkButtonProps = Omit<ButtonProps, "type"> & {
   href: string;

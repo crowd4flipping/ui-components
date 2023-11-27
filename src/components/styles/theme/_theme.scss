@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;600;700&family=Urbanist:ital,wght@0,100;0,400;0,700;0,900;1,100;1,400;1,700;1,900&display=swap");
 @import "./01.tools/all-tools";
 @import "./00.settings/colors";
 
@@ -8,28 +9,28 @@
 
   --text-color: #{$text-color};
   --subtitle-color: #{$subtitle-color};
-  
+
   --background-color: #{$background-color};
-  
+
   --surface-color: #{$surface-color};
-  
-  --card-color:  #{$card-color};
-  
+
+  --card-color: #{$card-color};
+
   --highlight-color: #{$highlight-color};
 }
 
 .dark-theme {
   --primary-color: #{$primary-color-dark};
   --primary-color-hover: #{$primary-color-dark-hover};
-  
+
   --text-color: #{$white};
   --subtitle-color: #{$subtitle-color-dark};
-  
+
   --background-color: #{$background-color-dark};
-  
+
   --surface-color: #{$surface-color-dark};
-  
-  --card-color:  #{$card-color-dark};
-  
+
+  --card-color: #{$card-color-dark};
+
   --highlight-color: #{$highlight-color-dark};
 }
