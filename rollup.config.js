@@ -4,6 +4,9 @@ import typescript from "@rollup/plugin-typescript";
 import dts from "rollup-plugin-dts";
 import postcss from "rollup-plugin-postcss";
 //import postcssJitProps from "postcss-jit-props";
+import css from "rollup-plugin-css-only";
+import terser from "@rollup/plugin-terser";
+import scss from "rollup-plugin-scss";
 
 export default [
   {
@@ -24,8 +27,15 @@ export default [
       }),
       commonjs(),
       typescript({ tsconfig: "./tsconfig.json" }),
+      terser(),
+      scss({
+        include: [
+          "./src/components/styles/theme/02.generics/_all-generics.scss",
+        ],
+      }),
       postcss({
-        plugins: [],
+        modules: true,
+        extract: true,
       }),
     ],
     external: ["react", "react-dom", "next/image"],
