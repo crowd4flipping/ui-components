@@ -25,12 +25,9 @@ export default [
       commonjs(),
       typescript({ tsconfig: "./tsconfig.json" }),
       postcss({
-        // extract: "styles.css",
-        plugins: [
-          /*  postcssJitProps({
-            files: ["./src/components/styles/theme/_theme.scss"],
-          }), */
-        ],
+        extract: true,
+        modules: true,
+        plugins: [],
       }),
     ],
     external: ["react", "react-dom", "next/image"],
