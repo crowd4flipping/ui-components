@@ -3,10 +3,8 @@ import React from "react";
 export const ProjectInStudyInfo = () => {
   return (
     <div>
-      <p>Estamos analizando la viabilidad de este proyecto.</p>
-      <br />
-      <p>
-        Te enviaremos un correo electrónico cuando esté abierto a inversión.
+      <p className={`fs--base fc--subtitle`}>
+        Estamos analizando la viabilidad de este proyecto.
       </p>
     </div>
   );

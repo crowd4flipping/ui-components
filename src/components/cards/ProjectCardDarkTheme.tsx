@@ -5,7 +5,6 @@ import { ProjectCardImage } from "./items/ProjectCardImage";
 import { ImageWrapperDescription } from "../images";
 import { ProjectCardVerticalLayoutDarkTheme } from "./dark-items/ProjectCardVerticalLayoutDarkTheme";
 import { ProjectCardLayoutDarkTheme } from "./dark-items/ProjectCardLayoutDarkTheme";
-//import "../styles/theme/index.scss";
 import "./styles/project-card.scss";
 import { ProjectCard } from "./ProjectCard";
 

@@ -1,10 +1,7 @@
 @use "./button.scss";
-@use "../../styles/theme/theme";
-@use "../../styles/theme/00.settings/all-settings";
 
 a.link-btn {
   @extend .btn;
-  @extend %paragraph;
 
   color: inherit;
   text-decoration: inherit;

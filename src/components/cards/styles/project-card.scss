@@ -1,22 +1,12 @@
-@use "../../styles/theme/theme";
-@use "../../styles/theme/00.settings/all-settings";
+@import "../../styles/theme/01.tools/all-tools";
 @import "../../styles/theme/04.objects/all-objects";
-@import "../../styles/theme/05.components/atoms/all-atoms";
 
-.project-card figure {
-  margin: 0;
-}
-
-.project-card div  {
-  box-sizing: border-box;
-}
 
 .project-card a {
   width: auto;
 }
 
 .project-card {
-  @extend %paragraph;
   display: inline-block;
   position: relative;
   overflow: hidden;
@@ -33,19 +23,6 @@
   border: $bw-xs solid rgba($white, 0.1);
 
   @include shadow-lg(rgba(0, 0, 0, 0.622));
-
-  & dl,
-  dd,
-  dt {
-    margin: 0;
-  }
-
-  & h1,
-  h2,
-  h3,
-  h4 {
-    margin: 0;
-  }
 
   &--dark-theme {
     background-color: $card-color-dark;

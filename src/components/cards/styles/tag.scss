@@ -1,8 +1,6 @@
-@use "../../styles/theme/theme";
 @import "../../styles/theme/00.settings/all-settings";
 
 .tag {
-  @extend %paragraph;
 
   display: inline-block;
   font-size: $fs-base;

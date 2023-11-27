@@ -4,11 +4,3 @@
 @import "./borders";
 @import "./spaces";
 @import "./screen-sizes";
-
-%paragraph {
-  font-size: $fs-base;
-  font-family: $ff-base;
-  font-size: $fs-md;
-  font-weight: $fw-base;
-  color: var(--text-color);
-}

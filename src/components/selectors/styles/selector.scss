@@ -1,9 +1,7 @@
-@use "../../styles/theme/theme";
 @import "../../styles/theme/00.settings/all-settings";
 @import "../../styles/theme/01.tools/all-tools";
 
 .selector {
-  @extend %paragraph;
   background-color: transparent;
 
   box-sizing: border-box;
@@ -32,7 +30,6 @@
   }
 
   &__content {
-    @extend %paragraph;
 
     overflow: hidden;
     background-color: var(--card-color);
