@@ -15,12 +15,6 @@
   transition: 0.3s;
 }
 
-a {
-  color: inherit;
-  text-decoration: inherit;
-  cursor: inherit;
-}
-
 .link-btn {
   @extend %base;
   text-decoration: inherit;

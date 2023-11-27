@@ -1,7 +1,6 @@
 @import "../../styles/theme/01.tools/all-tools";
 @import "../../styles/theme/04.objects/all-objects";
 
-
 .project-card a {
   width: auto;
 }
@@ -92,7 +91,7 @@
       @extend %flex-space-between;
     }
 
-    &--in-study{
+    &--in-study {
       font-size: $fs-base;
       color: var(--subtitle-color);
     }

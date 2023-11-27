@@ -1,6 +1,6 @@
 import React from "react";
 import { ButtonProps, ButtonSize, ButtonVariant } from "./types/types";
-import "./styles/link-button.scss";
+import "./styles/button.scss";
 
 type LinkButtonProps = Omit<ButtonProps, "type"> & {
   href: string;
@@ -20,9 +20,9 @@ export const LinkButton = ({
   return (
     <a rel="noreferrer" target={newTab ? "_blank" : "_self"} href={href}>
       <div
-        className={`link-btn fit-content ${buttonStyle(
-          variant
-        )} ${width} ${btnSize(size)} inline-block cursor-pointer`}
+        className={`btn fit-content ${buttonStyle(variant)} ${width} ${btnSize(
+          size
+        )} inline-block cursor-pointer`}
       >
         {children}
       </div>

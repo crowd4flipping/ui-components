@@ -1,9 +1,0 @@
-@use "./button.scss";
-
-a.link-btn {
-  @extend .btn;
-
-  color: inherit;
-  text-decoration: inherit;
-  cursor: inherit;
-}

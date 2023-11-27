@@ -8,10 +8,6 @@
   width: fit-content;
   height: 100%;
 
-  & div {
-    box-sizing: border-box;
-  }
-
   &__content {
     @extend %position-t-0;
 
