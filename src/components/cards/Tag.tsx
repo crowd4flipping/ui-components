@@ -1,5 +1,5 @@
 import React from "react";
-import "./styles/tag.scss";
+//import "./styles/tag.scss";
 
 const tagColors = ["green", "blue", "magenta", "orange"] as const;
 

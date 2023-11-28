@@ -1,6 +1,6 @@
 import React from "react";
 import * as RadioGroup from "@radix-ui/react-radio-group";
-import "./styles/options.scss";
+//import "./styles/options.scss";
 
 type Props = {
   fullWidth?: boolean;

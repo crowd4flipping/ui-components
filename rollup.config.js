@@ -2,8 +2,10 @@ import resolve from "@rollup/plugin-node-resolve";
 import commonjs from "@rollup/plugin-commonjs";
 import typescript from "@rollup/plugin-typescript";
 import dts from "rollup-plugin-dts";
-import postcss from "rollup-plugin-postcss";
-//import postcssJitProps from "postcss-jit-props";
+//import postcss from "rollup-plugin-postcss";
+import external from "rollup-plugin-peer-deps-external";
+import scss from "rollup-plugin-scss";
+import terser from "@rollup/plugin-terser";
 
 export default [
   {
@@ -24,9 +26,16 @@ export default [
       }),
       commonjs(),
       typescript({ tsconfig: "./tsconfig.json" }),
-      postcss({
+      /*  postcss({
         plugins: [],
+      }), */
+      scss({
+        output: true,
+        failOnError: true,
+        outputStyle: "compressed",
       }),
+      external(),
+      terser(),
     ],
     external: ["react", "react-dom", "next/image"],
   },

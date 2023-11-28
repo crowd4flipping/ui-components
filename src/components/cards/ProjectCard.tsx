@@ -3,7 +3,7 @@ import { ProjectCardLayout } from "./items/ProjectCardLayout";
 import { ProjectCardRightSide } from "./items/ProjectCardRightSide";
 import { ProjectCardVerticalLayout } from "./items/ProjectCardVerticalLayout";
 import { ProjectCardBottomSide } from "./items/ProjectCardBottomSide";
-import "./styles/project-card.scss";
+//import "./styles/project-card.scss";
 import { ProjectCardImage } from "./items/ProjectCardImage";
 import { ImageWrapperDescription } from "../images";
 

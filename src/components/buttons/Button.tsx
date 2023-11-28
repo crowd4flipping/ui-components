@@ -1,5 +1,5 @@
 import React from "react";
-import "./styles/button.scss";
+//import "./styles/button.scss";
 import { unhandledTyles } from "../../utils/utils";
 import { ButtonProps, ButtonSize, ButtonVariant } from "./types/types";
 
