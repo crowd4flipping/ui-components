@@ -30,7 +30,8 @@ export default [
         plugins: [],
       }), */
       scss({
-        output: true,
+        fileName: "styles.css",
+        //output: true,
         failOnError: true,
         outputStyle: "compressed",
       }),
@@ -44,5 +45,28 @@ export default [
     output: [{ file: "dist/index.d.ts", format: "esm" }],
     plugins: [dts()],
     external: [/\.scss$/],
+  },
+  {
+    input: "./src/components/styles/theme/_theme.scss",
+    output: [
+      {
+        file: "dist/theme.js",
+        format: "cjs",
+      },
+      {
+        file: "dist/theme.js",
+        format: "esm",
+      },
+    ],
+    plugins: [
+      scss({
+        fileName: "theme.css",
+        failOnError: true,
+        outputStyle: "compressed",
+      }),
+      external(),
+      terser(),
+    ],
+    external: ["react", "react-dom", "next/image"],
   },
 ];

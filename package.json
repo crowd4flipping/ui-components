@@ -1,6 +1,6 @@
 {
   "name": "@crowd4flipping/ui-components",
-  "version": "0.4.12",
+  "version": "0.4.13",
   "author": "Fernando Gonzalez",
   "license": "ISC",
   "description": "The official React components library of Crowd4Flipping (aka C4F)",
