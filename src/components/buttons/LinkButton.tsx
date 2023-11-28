@@ -20,7 +20,7 @@ export const LinkButton = ({
   return (
     <a rel="noreferrer" target={newTab ? "_blank" : "_self"} href={href}>
       <div
-        className={`btn fit-content ${buttonStyle(variant)} ${width} ${btnSize(
+        className={`btn ${buttonStyle(variant)} ${width} ${btnSize(
           size
         )} inline-block cursor-pointer`}
       >
